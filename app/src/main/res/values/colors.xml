@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
+    <color name="purple_500">#0000FF</color>
+    <color name="purple_700">#000000</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+
+
+
+    <color name="artemis_grey">#939598</color>
+    <color name="white">#FFFFFF</color>
+    <color name="artemis_red">#ed1c24</color>
+    <color name="artemis_blue">#0066b3</color>
+    <color name="artemis_orange">#f1592a</color>
+    <color name="artemis_sub_orange">#f68a1f</color>
+    <color name="black">#000000</color>
 </resources>
