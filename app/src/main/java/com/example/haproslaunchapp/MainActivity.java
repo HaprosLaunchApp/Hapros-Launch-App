@@ -4,6 +4,7 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.opengl.Visibility;
 import android.os.Bundle;
 import android.view.GestureDetector;
 import android.view.View;
@@ -27,15 +28,14 @@ public class MainActivity extends AppCompatActivity {
         display_patch = findViewById(R.id.show_patch_imageView);
         swipe_tv = findViewById(R.id.swipe_textView);
 
-
     }
 
 
 
     //TODO: replace the temporary buttons with OnSwipe or carrousel.
-    //TODO: make swipe_tv invisible after the OnSwipe / carrousel.
     public void right_click(View view) {
         patch_num++;
+        swipe_tv.setVisibility(View.INVISIBLE);
         if(patch_num > 8){
             patch_num = 1;
         }
@@ -76,6 +76,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void left_click(View view) {
         patch_num--;
+        swipe_tv.setVisibility(View.INVISIBLE);
         if(patch_num < 1){
             patch_num = 8;
         }
