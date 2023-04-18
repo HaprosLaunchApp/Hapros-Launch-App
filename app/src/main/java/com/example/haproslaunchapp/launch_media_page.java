@@ -18,6 +18,6 @@ public class launch_media_page extends AppCompatActivity {
         setContentView(R.layout.activity_launch_media_page);
         actionBar = getSupportActionBar();
         actionBar.setTitle("Launch Media Page");
-
+        //testing
     }
 }
