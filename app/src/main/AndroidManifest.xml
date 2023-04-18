@@ -12,6 +12,9 @@
         android:theme="@style/Theme.artemis_theme"
         tools:targetApi="31">
         <activity
+            android:name=".CountdownActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
