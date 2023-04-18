@@ -4,15 +4,68 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/artemis_grey">
 
     <TextView
+        android:id="@+id/swipe_textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="144dp"
+        android:layout_marginBottom="442dp"
+        android:text="Swipe Left or Right!"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/show_patch_imageView" />
+
+    <ImageView
+        android:id="@+id/show_patch_imageView"
+        android:layout_width="209dp"
+        android:layout_height="234dp"
+        android:layout_marginStart="101dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="101dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/swipe_textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+    <Button
+        android:id="@+id/temporary_left_button"
+        android:layout_width="69dp"
+        android:layout_height="76dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="78dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginBottom="577dp"
+        android:onClick="left_click"
+        android:text="Back"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/show_patch_imageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/temporary_right_button"
+        android:layout_width="69dp"
+        android:layout_height="76dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="78dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="577dp"
+        android:onClick="right_click"
+        android:text="Next"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/show_patch_imageView"
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
