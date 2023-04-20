@@ -18,6 +18,7 @@ public class CountdownActivity extends AppCompatActivity {
     String eventStr;
     DateTimeFormatter fmt;
     TextView days, hours, minutes, seconds;
+    boolean tenMinutes = false;
 
 
     @RequiresApi(api = Build.VERSION_CODES.O)
@@ -48,11 +49,18 @@ public class CountdownActivity extends AppCompatActivity {
                 minutes.setText(String.valueOf(diff.toMinutes() % 60));
                 seconds.setText(String.valueOf(diff.toSeconds() % 60));
                 handler.postDelayed(this,500); // set time here to refresh textView
+
+
+
+
             }
+
         });
 
 
 
 
     }
+
+
 }
