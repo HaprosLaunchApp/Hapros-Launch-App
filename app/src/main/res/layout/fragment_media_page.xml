@@ -1,39 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    tools:context=".MediaPages">
+    android:layout_height="match_parent"
+    tools:context=".mediaPage">
 
-    <TextView
-        android:id="@+id/year_countdown"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#7C7C7C"
-        android:text="T+ 105:13:10"
-        android:textAlignment="center"
-        android:textSize="24sp" />
+        android:orientation="vertical"
+        tools:context=".MediaPages">
 
-    <VideoView
-        android:id="@+id/mainVideoView"
-        android:layout_width="match_parent"
-        android:layout_height="218dp" />
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="483dp">
-
-        <LinearLayout
+        <ImageView
+            android:id="@+id/patchView_img"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="60dp"
+            android:src="@android:drawable/btn_star_big_on" />
+
+        <VideoView
+            android:id="@+id/mainVideoView"
+            android:layout_width="match_parent"
+            android:layout_height="218dp" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="483dp">
 
             <LinearLayout
+                android:id="@+id/scroll_layout"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
                 <LinearLayout
                     android:id="@+id/description_layout"
@@ -45,7 +43,9 @@
                         android:id="@+id/thumbnail_Bttn"
                         android:layout_width="match_parent"
                         android:layout_height="182dp"
+                        android:contentDescription="Post-Thumbnail"
                         android:scaleType="fitCenter"
+
                         app:srcCompat="@drawable/ic_launcher_background" />
 
                     <TextView
@@ -67,7 +67,6 @@
                 </LinearLayout>
 
             </LinearLayout>
-
-        </LinearLayout>
-    </ScrollView>
-</LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</FrameLayout>
