@@ -91,4 +91,12 @@
     </string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="launch1_details">launch1_details</string>
+    <string name="launch2_details">launch2_details</string>
+    <string name="launch3_details">launch3_details</string>
+    <string name="launch4_details">launch4_details</string>
+    <string name="launch5_details">launch5_details</string>
+    <string name="launch6_details">launch6_details</string>
+    <string name="launch7_details">launch7_details</string>
+    <string name="launch8_details">launch8_details</string>
 </resources>
