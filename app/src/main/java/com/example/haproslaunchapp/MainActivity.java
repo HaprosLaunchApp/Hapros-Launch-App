@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
     public void right_click(View view) {
         patch_num++;
         swipe_tv.setVisibility(View.INVISIBLE);
-        if(patch_num > 8){
+        if(patch_num > 7){
             patch_num = 1;
         }
 
@@ -83,18 +83,13 @@ public class MainActivity extends AppCompatActivity {
             main_actionBar.setTitle("Launch VII");
             about_launch.setText(R.string.launch7_details);
         }
-        else if(patch_num == 8){
-            //display_patch.setImageResource(R.drawable.patch8);
-            main_actionBar.setTitle("Launch VIII");
-            about_launch.setText(R.string.launch8_details);
-        }
     }
 
     public void left_click(View view) {
         patch_num--;
         swipe_tv.setVisibility(View.INVISIBLE);
         if(patch_num < 1){
-            patch_num = 8;
+            patch_num = 7;
         }
 
         if(patch_num == 1){
@@ -132,22 +127,12 @@ public class MainActivity extends AppCompatActivity {
             main_actionBar.setTitle("Launch VII");
             about_launch.setText(R.string.launch7_details);
         }
-        else if(patch_num == 8){
-            //display_patch.setImageResource(R.drawable.patch8);
-            main_actionBar.setTitle("Launch VIII");
-            about_launch.setText(R.string.launch8_details);
-        }
     }
 
     public void information_page_onclick(View view) {
-        if(patch_num != 8){
             information_about = new Intent(MainActivity.this, launch_media_page.class);
             information_about.putExtra("patch_number_data", patch_num);
-        }
-        else if(patch_num == 8){
-            information_about = new Intent(MainActivity.this, countdown_activity.class);
-        }
-        startActivity(information_about);
+            startActivity(information_about);
     }
 
     public void about_onclick(View view) {
