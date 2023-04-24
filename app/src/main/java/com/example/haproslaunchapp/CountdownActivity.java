@@ -31,7 +31,7 @@ public class CountdownActivity extends AppCompatActivity {
         minutes = findViewById(R.id.minutes_txt_countdown);
         seconds = findViewById(R.id.seconds_txt_countdown);
 
-        eventStr = "2023-05-13T08:00:00Z";
+        eventStr = "2023-05-13T14:00:00Z";
         fmt = DateTimeFormatter.ISO_ZONED_DATE_TIME;
         Instant event = fmt.parse(eventStr, Instant::from);
 
