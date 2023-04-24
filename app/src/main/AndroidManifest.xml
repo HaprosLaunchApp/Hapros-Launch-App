@@ -19,12 +19,9 @@
             android:name=".About_activity"
             android:exported="false" />
         <activity
-            android:name=".countdown_activity"
-            android:exported="false" />
-        <activity
             android:name=".launch_media_page"
             android:exported="false" />
-            
+        <activity
             android:name=".MainContentView"
             android:exported="false" />
         <activity
