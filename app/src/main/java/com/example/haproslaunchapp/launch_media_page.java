@@ -25,6 +25,8 @@ public class launch_media_page extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_launch_media_page);
+        Bundle bundle = getIntent().getExtras();
+        year = bundle.getByte("patch_number_data");
         actionBar = getSupportActionBar();
 
         tabLayout = findViewById(R.id.tab_layout);
