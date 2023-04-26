@@ -9,7 +9,19 @@
     <string name="launch5_details">launch5_details</string>
     <string name="launch6_details">launch6_details</string>
     <string name="launch7_details">launch7_details</string>
-    <string name="launch8_details">launch8_details</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="app_developers">App Developers</string>>
+    <string name="launch_team">Launch Team</string>>
+    <string name="engineering_team">Engineering Team</string>>
+    <string name="instructors">Instructors</string>>
+
+    <string name="app_developers_names">Fill with the developers\' names</string>>
+    <string name="launch_team_names">Fill with the launch team\'s names</string>>
+    <string name="engineering_team_names">Fill with the engineering team\'s names</string>>
+    <string name="instructors_names">Fill with the instructors\' names</string>>
 
 
 </resources>
