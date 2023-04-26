@@ -40,13 +40,42 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    //TODO: replace the temporary buttons with OnSwipe or carrousel.
-    public void right_click(View view) {
-        patch_num++;
-        swipe_tv.setVisibility(View.INVISIBLE);
-        if(patch_num > 7){
-            patch_num = 1;
-        }
+       patchLayout.getViewTreeObserver().addOnScrollChangedListener(new ViewTreeObserver.OnScrollChangedListener() {
+           @Override
+           public void onScrollChanged() {
+               currentPos = patchScrolls.getScrollX();
+               Log.d("test", Integer.toString(currentPos));
+               swipe_tv.setVisibility(View.INVISIBLE);
+               if(currentPos > 0 && currentPos < 550){
+                   patch_num = 1;
+               }
+               if(currentPos >= 550 && currentPos < 1670){
+                   patch_num = 2;
+               }
+               if(currentPos >= 1670 && currentPos < 2755){
+                   patch_num = 3;
+               }
+               if(currentPos >= 2755 && currentPos < 3848){
+                   patch_num = 4;
+               }
+               if(currentPos >= 3848 && currentPos < 4983){
+                   patch_num = 5;
+               }
+               if(currentPos >= 4983 && currentPos < 6018){
+                   patch_num = 6;
+               }
+               if(currentPos >= 6018){
+                   patch_num = 7;
+               }
+               updateInformation();
+           }
+       });
+
+    }
+
+
+
+    public void updateInformation() {
 
         if(patch_num == 1){
             //display_patch.setImageResource(R.drawable.patch1);
@@ -83,56 +112,26 @@ public class MainActivity extends AppCompatActivity {
             main_actionBar.setTitle("Launch VII");
             about_launch.setText(R.string.launch7_details);
         }
-    }
-
-    public void left_click(View view) {
-        patch_num--;
-        swipe_tv.setVisibility(View.INVISIBLE);
-        if(patch_num < 1){
-            patch_num = 7;
-        }
-
-        if(patch_num == 1){
-            //display_patch.setImageResource(R.drawable.patch1);
-            main_actionBar.setTitle("Launch I");
-            about_launch.setText(R.string.launch1_details);
-        }
-        else if(patch_num == 2){
-            //display_patch.setImageResource(R.drawable.patch2);
-            main_actionBar.setTitle("Launch II");
-            about_launch.setText(R.string.launch2_details);
-        }
-        else if(patch_num == 3){
-            //display_patch.setImageResource(R.drawable.patch3);
-            main_actionBar.setTitle("Launch III");
-            about_launch.setText(R.string.launch3_details);
-        }
-        else if(patch_num == 4){
-            //display_patch.setImageResource(R.drawable.patch4);
-            main_actionBar.setTitle("Launch IV");
-            about_launch.setText(R.string.launch4_details);
-        }
-        else if(patch_num == 5){
-            //display_patch.setImageResource(R.drawable.patch5);
-            main_actionBar.setTitle("Launch V");
-            about_launch.setText(R.string.launch5_details);
-        }
-        else if(patch_num == 6){
-            //display_patch.setImageResource(R.drawable.patch6);
-            main_actionBar.setTitle("Launch VI");
-            about_launch.setText(R.string.launch6_details);
-        }
-        else if(patch_num == 7){
-            //display_patch.setImageResource(R.drawable.patch7);
-            main_actionBar.setTitle("Launch VII");
-            about_launch.setText(R.string.launch7_details);
+        else if(patch_num == 8){
+            //display_patch.setImageResource(R.drawable.patch8);
+            main_actionBar.setTitle("Launch VIII");
+            about_launch.setText(R.string.launch8_details);
         }
     }
+
+
+
+
 
     public void information_page_onclick(View view) {
+        if(patch_num != 8){
             information_about = new Intent(MainActivity.this, launch_media_page.class);
             information_about.putExtra("patch_number_data", patch_num);
-            startActivity(information_about);
+        }
+        else if(patch_num == 8){
+            information_about = new Intent(MainActivity.this, countdown_activity.class);
+        }
+        startActivity(information_about);
     }
 
     public void about_onclick(View view) {

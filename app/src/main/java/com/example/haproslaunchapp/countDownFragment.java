@@ -4,10 +4,10 @@ import android.os.Build;
 import android.os.Bundle;
 
 import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.ActionBar;
 import androidx.fragment.app.Fragment;
 
 import android.os.Handler;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,8 +22,11 @@ public class countDownFragment extends Fragment {
     DateTimeFormatter fmt;
     TextView days, hours, minutes, seconds;
     Instant event;
+<<<<<<< HEAD
     
     boolean tenMinutes;
+=======
+>>>>>>> origin/Logan_Lenoir_4/16/2023
     public countDownFragment() {
         // Required empty public constructor
     }
@@ -57,6 +60,7 @@ public class countDownFragment extends Fragment {
                 days.setText(String.valueOf(diff.toDays()));
                 hours.setText( String.valueOf(diff.toHours() % 24));
                 minutes.setText(String.valueOf(diff.toMinutes() % 60));
+<<<<<<< HEAD
                 seconds.setText(String.valueOf(diff.toSeconds() % 60));
                 handler.postDelayed(this,500); // set time here to refresh textView
 
@@ -87,4 +91,13 @@ public class countDownFragment extends Fragment {
         Log.d("Test","Background Changes");
     }
     
+=======
+                seconds.setText(String.valueOf(diff.getSeconds() % 60));
+                handler.postDelayed(this,500); // set time here to refresh textView
+            }
+        });
+
+        return view;
+    }
+>>>>>>> origin/Logan_Lenoir_4/16/2023
 }
