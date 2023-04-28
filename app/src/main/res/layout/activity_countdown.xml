@@ -17,7 +17,7 @@
             android:layout_width="411dp"
             android:layout_height="731dp"
             android:scaleType="centerCrop"
-            />
+            app:srcCompat="@drawable/background" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -118,7 +118,7 @@
 
 
             <TextView
-                android:id="@+id/until_launch_text_view"
+                android:id="@+id/untilLaunch_txt_countdown"
                 android:layout_width="wrap_content"
                 android:layout_height="45dp"
                 android:layout_gravity="center_horizontal"
@@ -129,15 +129,15 @@
                 android:textSize="40dp" />
 
             <Button
-                android:id="@+id/button_to_live"
-                android:layout_width="101dp"
-                android:layout_height="52dp"
-                android:layout_marginStart="155dp"
-                android:text="Button"
+                android:id="@+id/toLive_bttn_countdown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:onClick="onToWebsiteClick"
+                android:text="Track Capsule"
                 android:visibility="invisible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/until_launch_text_view" />
+                app:layout_constraintStart_toStartOf="parent" />
 
         </LinearLayout>
 
