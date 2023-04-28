@@ -85,8 +85,10 @@
         android:layout_marginBottom="33dp"
         app:layout_constraintBottom_toTopOf="@+id/swipe_textView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
 
         <LinearLayout
             android:id="@+id/PatchViewLayout"
@@ -102,7 +104,7 @@
                 android:layout_marginEnd="101dp"
                 android:layout_marginBottom="20dp"
                 android:onClick="information_page_onclick"
-                app:srcCompat="@drawable/ic_launcher_background" />
+                app:srcCompat="@drawable/haprosi_patch" />
 
             <ImageView
                 android:id="@+id/patch_image2"
@@ -114,7 +116,7 @@
                 android:layout_marginBottom="20dp"
                 android:layout_weight="1"
                 android:onClick="information_page_onclick"
-                app:srcCompat="@drawable/ic_launcher_background" />
+                app:srcCompat="@drawable/haprosii_patch" />
 
             <ImageView
                 android:id="@+id/patch_image3"
@@ -126,7 +128,7 @@
                 android:layout_marginBottom="20dp"
                 android:layout_weight="1"
                 android:onClick="information_page_onclick"
-                app:srcCompat="@drawable/ic_launcher_background" />
+                app:srcCompat="@drawable/haprosiii_patch" />
 
             <ImageView
                 android:id="@+id/patch_image4"
@@ -138,7 +140,7 @@
                 android:layout_marginBottom="20dp"
                 android:layout_weight="1"
                 android:onClick="information_page_onclick"
-                app:srcCompat="@drawable/ic_launcher_background" />
+                app:srcCompat="@drawable/haprosiv_patch" />
 
             <ImageView
                 android:id="@+id/patch_image5"
@@ -150,7 +152,7 @@
                 android:layout_marginBottom="20dp"
                 android:layout_weight="1"
                 android:onClick="information_page_onclick"
-                app:srcCompat="@drawable/ic_launcher_background" />
+                app:srcCompat="@drawable/haprosv_patch" />
 
             <ImageView
                 android:id="@+id/patch_image6"
@@ -162,7 +164,7 @@
                 android:layout_marginBottom="20dp"
                 android:layout_weight="1"
                 android:onClick="information_page_onclick"
-                app:srcCompat="@drawable/ic_launcher_background" />
+                app:srcCompat="@drawable/haprosvi_patch" />
 
             <ImageView
                 android:id="@+id/patch_image7"
@@ -174,7 +176,7 @@
                 android:layout_marginBottom="20dp"
                 android:layout_weight="1"
                 android:onClick="information_page_onclick"
-                app:srcCompat="@drawable/ic_launcher_background" />
+                app:srcCompat="@drawable/haprosvii_patch" />
 
         </LinearLayout>
     </HorizontalScrollView>
