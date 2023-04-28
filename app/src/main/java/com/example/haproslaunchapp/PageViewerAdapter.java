@@ -28,11 +28,13 @@ public class PageViewerAdapter extends FragmentStateAdapter {
                 return new mediaPage(6);
             case 6:
                 return new countDownFragment();
+            case 7:
+                return new back_home_fragment();
             default:
                 return new countDownFragment();
         }
     }
     @Override
-    public int getItemCount(){return 7;}
+    public int getItemCount(){return 8;}
 
 }
