@@ -45,7 +45,6 @@ public class mediaPage extends Fragment {
 
     public mediaPage(int yearID) {
         // Required empty public constructor
-
         yearID = yearID;
         timeLineData = new ArrayList<>();
         timeLineList = new ArrayList<>();

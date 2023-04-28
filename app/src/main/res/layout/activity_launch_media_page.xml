@@ -4,12 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".launch_media_page">
+    tools:context=".launch_media_page"
+    android:orientation="vertical">
 
     <androidx.viewpager2.widget.ViewPager2
         android:layout_width="match_parent"
-
         android:layout_height="0dp"
         android:layout_weight="1"
         android:id="@+id/page_viewer"/>
@@ -18,7 +17,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/tab_layout">
-        
+
         <com.google.android.material.tabs.TabItem
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -47,7 +46,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="VII"/>
-        
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Home"/>
+
     </com.google.android.material.tabs.TabLayout>
 
 
