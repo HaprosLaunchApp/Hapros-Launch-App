@@ -22,13 +22,28 @@ public class PageViewerAdapter extends FragmentStateAdapter {
     @NonNull
     @Override
     public Fragment createFragment(int position){
-        if (position >= 6)
-            return new countDownFragment();
-        mediaPage frag = new mediaPage(position);
-
-        return frag;
+        switch(position){
+            case 0:
+                return new mediaPage(1);
+            case 1:
+                return new mediaPage(2);
+            case 2:
+                return new mediaPage(3);
+            case 3:
+                return new mediaPage(4);
+            case 4:
+                return new mediaPage(5);
+            case 5:
+                return new mediaPage(6);
+            case 6:
+                return new countDownFragment();
+            case 7:
+                return new back_home_fragment();
+            default:
+                return new countDownFragment();
+        }
     }
     @Override
-    public int getItemCount(){return 7;}
+    public int getItemCount(){return 8;}
 
 }
