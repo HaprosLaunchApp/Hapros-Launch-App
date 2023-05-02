@@ -48,7 +48,6 @@ public class countDownFragment extends Fragment {
         untilLaunch = (TextView) view.findViewById(R.id.untilLaunch_txt_countdown);
 
         eventStr = "2023-05-13T14:00:00Z";
-        eventStr = "2023-04-28T15:20:00Z";
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             fmt = DateTimeFormatter.ISO_ZONED_DATE_TIME;
         }
