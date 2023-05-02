@@ -6,6 +6,7 @@ import androidx.viewpager2.widget.ViewPager2;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;
@@ -23,7 +24,6 @@ public class launch_media_page extends AppCompatActivity {
     Intent backHome;
 
     byte year;
-    ArrayList images;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -40,22 +40,18 @@ public class launch_media_page extends AppCompatActivity {
         pageviewer.setAdapter(viewAdapter);
         backHome = new Intent(launch_media_page.this, MainActivity.class);
 
-        /*
-        unfinished
-        images = new ArrayList();
-        images.add(R.drawable.roman_numerals_i_temporary);
-        images.add(R.drawable.roman_numerals_ii_temporary);
-        images.add(R.drawable.roman_numerals_iii_temporary);
-        images.add(R.drawable.roman_numerals_iv_temporary);
-        images.add(R.drawable.roman_numerals_v_temporary);
-        images.add(R.drawable.roman_numerals_vi_temporary);
-        images.add(R.drawable.roman_numerals_vii_temporary);
 
-        for (int i = 0; i < tabLayout.getTabCount(); i++) {
-            tabLayout.getTabAt(i-1).setIcon((Drawable) images.get(i - 1));
-        }
 
-        tabLayout.getTabAt(7).setIcon(R.drawable.home_icon);*/
+        // The pictures won't display because they are all greyed out.
+        tabLayout.getTabAt(0).setIcon(R.drawable.roman_numerals_i);
+        tabLayout.getTabAt(1).setIcon(R.drawable.roman_numerals_ii);
+        tabLayout.getTabAt(2).setIcon(R.drawable.roman_numerals_iii);
+        tabLayout.getTabAt(3).setIcon(R.drawable.roman_numerals_iv);
+        tabLayout.getTabAt(4).setIcon(R.drawable.roman_numerals_v);
+        tabLayout.getTabAt(5).setIcon(R.drawable.roman_numerals_vi);
+        tabLayout.getTabAt(6).setIcon(R.drawable.roman_numerals_vii);
+        tabLayout.getTabAt(7).setIcon(R.drawable.home_icon);
+
 
 
 
