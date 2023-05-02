@@ -1,16 +1,16 @@
 {
     "id": 0,
     "launchDate" : "May, 14, 2022",
-    "videoDir" : "video.mp4",
+    "videoDir" : "video",
     "postTimeline" : [
       {
         "date":"May, 4, 2022",
-        "imgDir" : "0504022.png",
+        "imgDir" : "haprosii_capsule",
         "postDescription" : " This is a small example post to use for each picture, this is where you will write a couple of sentences to describe the post."
       },
       {
         "date":"March, 15, 2022",
-        "imgDir" : "0315022.png",
+        "imgDir" : "haprosi_patch",
         "postDescription" : " This is a small example post to use for each picture, this is where you will write a couple of sentences to describe the post."
       }
     ]
