@@ -17,7 +17,7 @@ public class About_activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
         actionBar = getSupportActionBar();
-        actionBar.hide();
+        actionBar.setTitle("About HAPROS");
     }
 
     public void home(View view) {
