@@ -22,9 +22,6 @@
             android:name=".launch_media_page"
             android:exported="false" />
         <activity
-            android:name=".MainContentView"
-            android:exported="false" />
-        <activity
             android:name=".MediaPages"
             android:exported="false" />
         <activity

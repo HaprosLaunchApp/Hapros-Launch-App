@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:backgroundTint="#390909"
     tools:context=".back_home_fragment">
 
     <LinearLayout
@@ -15,15 +17,17 @@
             android:id="@+id/textView9"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Do you want to go back to the home page?"
+            android:layout_margin="5dp"
+            android:text="Press this icon to return to the home page"
+            android:textColor="#FFFFFF"
             android:textSize="30sp" />
 
         <ImageView
             android:id="@+id/imageView4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/home_icon"
-            android:onClick="back_to_home"/>
+            android:onClick="back_to_home"
+            android:src="@drawable/home_icon" />
 
     </LinearLayout>
 
