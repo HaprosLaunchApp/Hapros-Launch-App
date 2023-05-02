@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <Item name = "Red">#f20000</Item>
+    <Item name = "blue">#00129a</Item>
+    <Item name = "Gray">#6e6d76</Item>
+    <Item name = "Green">#669628</Item>
+    <Item name = "Orange">#fe6100</Item>
+</resources>
