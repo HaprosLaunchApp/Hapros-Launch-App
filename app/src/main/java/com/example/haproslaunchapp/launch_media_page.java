@@ -36,7 +36,7 @@ public class launch_media_page extends AppCompatActivity {
 
         tabLayout = findViewById(R.id.tab_layout);
         pageviewer = findViewById(R.id.page_viewer);
-        viewAdapter = new PageViewerAdapter(this);
+        viewAdapter = new PageViewerAdapter(this,getApplicationContext());
         pageviewer.setAdapter(viewAdapter);
         backHome = new Intent(launch_media_page.this, MainActivity.class);
 

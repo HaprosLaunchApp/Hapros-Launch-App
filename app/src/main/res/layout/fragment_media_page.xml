@@ -25,48 +25,13 @@
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="483dp">
+            android:layout_height="wrap_content">
 
             <LinearLayout
                 android:id="@+id/scroll_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <LinearLayout
-                    android:id="@+id/description_layout"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <ImageButton
-                        android:id="@+id/thumbnail_Bttn"
-                        android:layout_width="match_parent"
-                        android:layout_height="182dp"
-                        android:contentDescription="Post-Thumbnail"
-                        android:scaleType="fitCenter"
-
-                        app:srcCompat="@drawable/ic_launcher_background" />
-
-                    <TextView
-                        android:id="@+id/postHeader_ttv"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="December 31st 2022"
-                        android:textSize="24sp"
-                        android:textStyle="bold"
-                        app:autoSizeTextType="none" />
-
-                    <TextView
-                        android:id="@+id/postDesc_ttv"
-                        android:layout_width="match_parent"
-                        android:layout_height="111dp"
-                        android:text="This is a short post describing the post"
-                        android:textSize="16sp" />
-
-                </LinearLayout>
-
-            </LinearLayout>
+                android:orientation="vertical" />
         </ScrollView>
     </LinearLayout>
 </LinearLayout>
