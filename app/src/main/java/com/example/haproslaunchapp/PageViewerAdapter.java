@@ -22,6 +22,7 @@ public class PageViewerAdapter extends FragmentStateAdapter {
         mediaPage frag = new mediaPage(position,context);
 
         return frag;
+
     }
 
     @Override

@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:backgroundTint="#390909"
     tools:context=".About_activity">
 
     <LinearLayout
@@ -35,14 +37,18 @@
                 android:layout_height="28dp"
                 android:gravity="center"
                 android:text="@string/engineering_team"
-                android:textColor="#000000"
-                android:textSize="20dp" />
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/textView8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/engineering_team_names" />
+                android:layout_marginBottom="15dp"
+                android:text="@string/engineering_team_names"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/textView5"
@@ -50,44 +56,57 @@
                 android:layout_height="28dp"
                 android:gravity="center"
                 android:text="@string/instructors"
-                android:textColor="#000000"
-                android:textSize="20dp" />
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/textView6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/instructors_names" />
+                android:layout_marginBottom="15dp"
+                android:text="@string/instructors_names"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/textView3"
                 android:layout_width="match_parent"
                 android:layout_height="28dp"
                 android:gravity="center"
-                android:text="@string/engineering_team"
-                android:textColor="#000000"
-                android:textSize="20dp" />
+                android:text="@string/launch_team"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/textView4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/engineering_team_names" />
+                android:layout_marginBottom="15dp"
+                android:text="@string/launch_team_names"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/textView"
                 android:layout_width="match_parent"
                 android:layout_height="28dp"
+                android:fontFamily="sans-serif"
                 android:gravity="center"
                 android:text="@string/app_developers"
-                android:textColor="#000000"
-                android:textSize="20dp" />
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/textView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/app_developers_names" />
+                android:layout_marginBottom="15dp"
+                android:text="@string/app_developers_names"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
         </LinearLayout>
     </LinearLayout>
 

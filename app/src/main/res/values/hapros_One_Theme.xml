@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name = "Red_launch_one">#e32a3f</color>
+    <color name = "bluelaunch_one">#1c5cac</color>
+    <color name = "whitelaunch_one">#ffffff</color>
+</resources>

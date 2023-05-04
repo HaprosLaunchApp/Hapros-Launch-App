@@ -179,6 +179,7 @@ public class mediaPage extends Fragment {
             scrollView.addView(postLayout);
         }
 
+
         return view;
     }
 }
