@@ -35,8 +35,34 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/swipe_textView" />
 
-    <HorizontalScrollView
-        android:id="@+id/patch_scroll"
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="64dp"
+        android:layout_height="76dp"
+        android:onClick="to_tooele_county"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.773"
+        app:layout_constraintStart_toEndOf="@+id/about_button"
+        app:layout_constraintTop_toBottomOf="@+id/about_launch_tv"
+        app:layout_constraintVertical_bias="0.627"
+        app:srcCompat="@drawable/tooele_logo_removebg" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="64dp"
+        android:layout_height="76dp"
+        android:onClick="to_hapros_facebook"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.084"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/about_launch_tv"
+        app:layout_constraintVertical_bias="0.627"
+        app:srcCompat="@drawable/facebook_logo" />
+
+    <com.example.haproslaunchapp.CoolScrollView
+        android:id="@+id/patch_scroll_main"
         android:layout_width="410dp"
         android:layout_height="237dp"
         android:layout_marginEnd="1dp"
@@ -142,7 +168,7 @@
                 app:srcCompat="@drawable/haprosvii_patch" />
 
         </LinearLayout>
-    </HorizontalScrollView>
+    </com.example.haproslaunchapp.CoolScrollView>
 
     <LinearLayout
         android:layout_width="411dp"
