@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <Item name = "Gray">#8d8e8e</Item>
-    <Item name = "DarkBlue">#100e27</Item>
+    <color name = "Gray_launch_four">#8d8e8e</color>
+    <color name = "DarkBlue_launch_four">#100e27</color>
 </resources>

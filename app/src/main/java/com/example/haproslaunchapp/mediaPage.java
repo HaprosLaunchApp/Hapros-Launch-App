@@ -146,25 +146,25 @@ public class mediaPage extends Fragment {
         // Inflate the layout for this fragment
         View view =inflater.inflate(R.layout.fragment_media_page, container, false);
         LinearLayout scrollView = (LinearLayout) view.findViewById(R.id.scroll_layout);
-        for (MediaPost post: getTimeLineList()) {
-            LinearLayout postLayout = new LinearLayout(view.getContext());
-            postLayout.setOrientation(LinearLayout.VERTICAL);
-            ImageButton postImg = new ImageButton(postLayout.getContext());
-            TextView dateHead = new TextView(postLayout.getContext());
-            TextView postDesc = new TextView(postLayout.getContext());
-            postImg.setScaleType(ImageView.ScaleType.FIT_CENTER);
-            postImg.setMaxWidth(182);
-//            postImg.setImageURI("Set Image Url");
-            postLayout.addView(postImg);
-            dateHead.setTextSize(24);
-            dateHead.setTypeface(dateHead.getTypeface(), Typeface.BOLD);
-            dateHead.setText(post.getPostDate());
-            postLayout.addView(dateHead);
-            postDesc.setTextSize(16);
-            postDesc.setText(post.getPostDesc());
-            postLayout.addView(postDesc);
-            scrollView.addView(postLayout);
-        }
+//        for (MediaPost post: getTimeLineList()) {
+//            LinearLayout postLayout = new LinearLayout(view.getContext());
+//            postLayout.setOrientation(LinearLayout.VERTICAL);
+//            ImageButton postImg = new ImageButton(postLayout.getContext());
+//            TextView dateHead = new TextView(postLayout.getContext());
+//            TextView postDesc = new TextView(postLayout.getContext());
+//            postImg.setScaleType(ImageView.ScaleType.FIT_CENTER);
+//            postImg.setMaxWidth(182);
+////            postImg.setImageURI("Set Image Url");
+//            postLayout.addView(postImg);
+//            dateHead.setTextSize(24);
+//            dateHead.setTypeface(dateHead.getTypeface(), Typeface.BOLD);
+//            dateHead.setText(post.getPostDate());
+//            postLayout.addView(dateHead);
+//            postDesc.setTextSize(16);
+//            postDesc.setText(post.getPostDesc());
+//            postLayout.addView(postDesc);
+//            scrollView.addView(postLayout);
+//        }
 
         return view;
     }

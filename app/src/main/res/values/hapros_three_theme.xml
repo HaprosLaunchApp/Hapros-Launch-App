@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <Item name = "Red">#ed1114</Item>
-    <Item name = "blue">#0464bb</Item>
-    <Item name = "Turquoise">#04abbb</Item>
-    <Item name = "White">#c3dde3</Item>
-    <Item name = "black">#060607</Item>
+    <color name = "Red_launch_three">#ed1114</color>
+    <color name = "blue_launch_three">#0464bb</color>
+    <color name = "Turquoise_launch_three">#04abbb</color>
+    <color name = "White_launch_three">#c3dde3</color>
+    <color name = "black_launch_three">#060607</color>
 </resources>

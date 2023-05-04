@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <Item name = "Red">#b31646</Item>
-    <Item name = "blue">#0763b6</Item>
-    <Item name = "white">#cdddec</Item>
+    <color name = "Red_launch_two">#b31646</color>
+    <color name = "blue_launch_two">#0763b6</color>
+    <color name = "white_launch_two">#cdddec</color>
 </resources>
