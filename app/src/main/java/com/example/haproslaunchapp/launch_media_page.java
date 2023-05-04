@@ -42,14 +42,14 @@ public class launch_media_page extends AppCompatActivity {
 
 
 
-        // The pictures won't display because they are all greyed out.
-        tabLayout.getTabAt(0).setIcon(R.drawable.roman_numerals_i);
-        tabLayout.getTabAt(1).setIcon(R.drawable.roman_numerals_ii);
-        tabLayout.getTabAt(2).setIcon(R.drawable.roman_numerals_iii);
-        tabLayout.getTabAt(3).setIcon(R.drawable.roman_numerals_iv);
-        tabLayout.getTabAt(4).setIcon(R.drawable.roman_numerals_v);
-        tabLayout.getTabAt(5).setIcon(R.drawable.roman_numerals_vi);
-        tabLayout.getTabAt(6).setIcon(R.drawable.roman_numerals_vii);
+
+        tabLayout.getTabAt(0).setIcon(R.drawable.roman_numeral_i);
+        tabLayout.getTabAt(1).setIcon(R.drawable.roman_numeral_ii);
+        tabLayout.getTabAt(2).setIcon(R.drawable.roman_numeral_iii);
+        tabLayout.getTabAt(3).setIcon(R.drawable.roman_numeral_iv);
+        tabLayout.getTabAt(4).setIcon(R.drawable.roman_numeral_v);
+        tabLayout.getTabAt(5).setIcon(R.drawable.roman_numeral_vi);
+        tabLayout.getTabAt(6).setIcon(R.drawable.roman_numeral_vii);
         tabLayout.getTabAt(7).setIcon(R.drawable.home_icon);
 
 
