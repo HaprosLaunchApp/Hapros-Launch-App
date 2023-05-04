@@ -21,22 +21,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
-        android:id="@+id/about_button"
-        android:layout_width="133dp"
-        android:layout_height="54dp"
-        android:layout_marginStart="161dp"
-        android:layout_marginTop="34dp"
-        android:layout_marginEnd="162dp"
-        android:layout_marginBottom="10dp"
-        android:onClick="about_onclick"
-        android:text="About"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.488"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/about_launch_tv" />
-
     <TextView
         android:id="@+id/about_launch_tv"
         android:layout_width="367dp"
@@ -51,32 +35,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/swipe_textView" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="64dp"
-        android:layout_height="76dp"
-        android:onClick="to_tooele_county"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.773"
-        app:layout_constraintStart_toEndOf="@+id/about_button"
-        app:layout_constraintTop_toBottomOf="@+id/about_launch_tv"
-        app:layout_constraintVertical_bias="0.627"
-        app:srcCompat="@drawable/tooele_logo_removebg" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="64dp"
-        android:layout_height="76dp"
-        android:onClick="to_hapros_facebook"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageView"
-        app:layout_constraintHorizontal_bias="0.084"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/about_launch_tv"
-        app:layout_constraintVertical_bias="0.627"
-        app:srcCompat="@drawable/facebook_logo" />
 
     <HorizontalScrollView
         android:id="@+id/patch_scroll"
@@ -186,5 +144,43 @@
 
         </LinearLayout>
     </HorizontalScrollView>
+
+    <LinearLayout
+        android:layout_width="411dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="55dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/about_launch_tv">
+
+        <ImageButton
+            android:id="@+id/imageButton3"
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/artemis_blue"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/tooele_logo_removebg"
+            android:onClick="to_tooele_county"/>
+
+        <Button
+            android:id="@+id/about_button"
+            android:layout_width="133dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="about_onclick"
+            android:text="About" />
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/artemis_blue"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/facebook_logo"
+            android:onClick="to_hapros_facebook"/> />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
