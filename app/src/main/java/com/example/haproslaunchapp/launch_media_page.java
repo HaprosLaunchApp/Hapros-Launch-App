@@ -55,7 +55,7 @@ public class launch_media_page extends AppCompatActivity {
 
         //Sets the actionbar's home button.
         ActionBar actionBar = getSupportActionBar();
-        actionBar.setHomeAsUpIndicator(R.drawable.tux);
+        actionBar.setHomeAsUpIndicator(R.drawable.tux_in_home2_resized);
         actionBar.setDisplayHomeAsUpEnabled(true);
 
 
