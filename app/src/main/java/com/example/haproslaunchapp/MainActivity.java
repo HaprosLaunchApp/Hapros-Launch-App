@@ -88,7 +88,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void updateInformation() {
-
         if(patch_num == 1){
 
             main_actionBar.setTitle("Launch I");

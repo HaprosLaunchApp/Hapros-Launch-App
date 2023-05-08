@@ -4,27 +4,58 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#090B1B"
+    android:background="#0F0E30"
     tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="125dp"
+        android:layout_weight="1"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/scroll_main"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/haprosiii_view" />
 
     <TextView
         android:id="@+id/swipe_textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="144dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="5dp"
         android:layout_marginEnd="144dp"
-        android:layout_marginBottom="442dp"
+        android:layout_marginBottom="500dp"
         android:text="Swipe Left or Right!"
-        android:textColor="#FFFFFF"
+        android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/patch_scroll" />
+
+    <TextView
+        android:id="@+id/launchTitle_txt_main"
+        android:layout_width="367dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:text="@string/launch1_title"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.455" />
 
     <ScrollView
         android:id="@+id/scroll_main"
         android:layout_width="365dp"
-        android:layout_height="344dp"
+        android:layout_height="269dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.478"
@@ -38,22 +69,14 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/launchTitle_txt_main"
-                android:layout_width="367dp"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/launch1_title"
-                android:textColor="#FFFFFF"
-                android:textSize="20sp" />
-
-            <TextView
                 android:id="@+id/about_launch_tv2"
                 android:layout_width="367dp"
-                android:layout_height="324dp"
+                android:layout_height="wrap_content"
                 android:lineSpacingExtra="10sp"
                 android:text="(Set info about each launch)"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
+
         </LinearLayout>
     </ScrollView>
 
@@ -62,7 +85,7 @@
         android:layout_width="410dp"
         android:layout_height="237dp"
         android:layout_marginEnd="1dp"
-        android:layout_marginBottom="33dp"
+        android:layout_marginBottom="10dp"
         app:layout_constraintBottom_toTopOf="@+id/swipe_textView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -98,6 +121,7 @@
                 android:layout_marginEnd="101dp"
                 android:layout_marginBottom="20dp"
                 android:layout_weight="1"
+                android:foregroundTint="#AEAFAF"
                 android:onClick="information_page_onclick"
                 app:srcCompat="@drawable/haprosii_patch" />
 
@@ -123,6 +147,7 @@
                 android:layout_marginEnd="101dp"
                 android:layout_marginBottom="20dp"
                 android:layout_weight="1"
+                android:backgroundTint="#100E27"
                 android:onClick="information_page_onclick"
                 app:srcCompat="@drawable/hapros_iv_patch" />
 
@@ -171,7 +196,7 @@
         android:id="@+id/about_bar"
         android:layout_width="411dp"
         android:layout_height="55dp"
-        android:layout_marginTop="55dp"
+        android:layout_marginTop="300dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -207,5 +232,17 @@
             android:onClick="to_hapros_facebook"/>
 
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="71dp"
+        android:layout_height="83dp"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="@+id/imageView5"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/imageView5"
+        app:layout_constraintTop_toTopOf="@+id/patch_scroll"
+        app:layout_constraintVertical_bias="0.43"
+        app:srcCompat="@drawable/tux" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

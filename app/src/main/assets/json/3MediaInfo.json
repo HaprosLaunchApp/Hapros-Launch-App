@@ -1,0 +1,24 @@
+{
+  "id": 1,
+  "launchDate" : "May, 14, 2022",
+  "videoDir" : "haprosv_prepare",
+  "postTimeline" : [
+    {
+      "date":"Hapros Capsule",
+      "imgDir" : "hapros_capsule",
+      "postDescription" : "a picture of this years mascot, lenny and the capsule that we sent to space with the balloon"
+    },
+    {
+      "date":"The Climb",
+      "imgDir" : "hapros_celebrate",
+      "postDescription" : "This is us climbing up an aviation control tower at Wendover air base. Some of us were a little scared of the height."
+    },
+
+    {
+      "date":"Celebration",
+      "imgDir" : "hapros_celebrate",
+      "postDescription" : "After a successful launch the team has a little dance to celebrate."
+    }
+  ]
+
+}
