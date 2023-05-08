@@ -11,14 +11,16 @@ import android.view.View;
 import android.view.ViewTreeObserver;
 import android.widget.HorizontalScrollView;
 import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     ActionBar main_actionBar;
-    TextView swipe_tv, about_launch;
+    TextView swipe_tv, about_launch, launchTitle;
     byte patch_num;
     Intent webpage, about, information_about;
     LinearLayout patchLayout;
+    ScrollView scrollView;
     HorizontalScrollView patchScrolls;
     int currentPos;
 
@@ -32,7 +34,9 @@ public class MainActivity extends AppCompatActivity {
         main_actionBar.setTitle("Launch I");
 
         swipe_tv = findViewById(R.id.swipe_textView);
-        about_launch = findViewById(R.id.about_launch_tv);
+        scrollView = findViewById(R.id.scroll_main);
+        launchTitle = findViewById(R.id.launchTitle_txt_main);
+        about_launch = findViewById(R.id.about_launch_tv2);
         about_launch.setText(R.string.launch1_details);
         patchLayout = findViewById(R.id.PatchViewLayout);
         patchScrolls = findViewById(R.id.patch_scroll);
@@ -84,31 +88,38 @@ public class MainActivity extends AppCompatActivity {
 
             main_actionBar.setTitle("Launch I");
             about_launch.setText(R.string.launch1_details);
+            launchTitle.setText(R.string.launch1_title);
         }
         else if(patch_num == 2){
 
             main_actionBar.setTitle("Launch II");
             about_launch.setText(R.string.launch2_details);
+            launchTitle.setText(R.string.launch2_title);
         }
         else if(patch_num == 3){
             main_actionBar.setTitle("Launch III");
             about_launch.setText(R.string.launch3_details);
+            launchTitle.setText(R.string.launch3_title);
         }
         else if(patch_num == 4){
             main_actionBar.setTitle("Launch IV");
             about_launch.setText(R.string.launch4_details);
+            launchTitle.setText(R.string.launch4_title);
         }
         else if(patch_num == 5){
             main_actionBar.setTitle("Launch V");
             about_launch.setText(R.string.launch5_details);
+            launchTitle.setText(R.string.launch5_title);
         }
         else if(patch_num == 6){
             main_actionBar.setTitle("Launch VI");
             about_launch.setText(R.string.launch6_details);
+            launchTitle.setText(R.string.launch6_title);
         }
         else if(patch_num == 7){
             main_actionBar.setTitle("Launch VII");
             about_launch.setText(R.string.launch7_details);
+            launchTitle.setText(R.string.launch7_title);
         }
     }
 

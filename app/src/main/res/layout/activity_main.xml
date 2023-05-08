@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#343534"
+    android:background="#090B1B"
     tools:context=".MainActivity">
 
     <TextView
@@ -20,20 +20,42 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-    <TextView
-        android:id="@+id/about_launch_tv"
-        android:layout_width="367dp"
-        android:layout_height="324dp"
-        android:layout_marginTop="11dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="34dp"
-        android:text="(Set info about each launch)"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/about_button"
+
+    <ScrollView
+        android:id="@+id/scroll_main"
+        android:layout_width="365dp"
+        android:layout_height="344dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.478"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/swipe_textView" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.777">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/launchTitle_txt_main"
+                android:layout_width="367dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/launch1_title"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/about_launch_tv2"
+                android:layout_width="367dp"
+                android:layout_height="324dp"
+                android:lineSpacingExtra="10sp"
+                android:text="(Set info about each launch)"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </ScrollView>
 
     <HorizontalScrollView
         android:id="@+id/patch_scroll"
@@ -152,16 +174,16 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/about_launch_tv">
+        app:layout_constraintTop_toBottomOf="@+id/launchTitle_txt_main">
 
         <ImageButton
             android:id="@+id/imageButton3"
             android:layout_width="85dp"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/artemis_blue"
+            android:onClick="to_tooele_county"
             android:scaleType="fitCenter"
-            app:srcCompat="@drawable/tooele_logo_removebg"
-            android:onClick="to_tooele_county"/>
+            app:srcCompat="@drawable/tooele_logo_removebg" />
 
         <Button
             android:id="@+id/about_button"
@@ -176,9 +198,10 @@
             android:layout_width="85dp"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/artemis_blue"
+            android:onClick="to_hapros_facebook"
             android:scaleType="fitCenter"
-            app:srcCompat="@drawable/facebook_logo"
-            android:onClick="to_hapros_facebook"/> />
+            app:srcCompat="@drawable/facebook_logo" />
+        />
 
     </LinearLayout>
 
