@@ -1,12 +1,15 @@
 package com.example.haproslaunchapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewTreeObserver;
 import android.widget.HorizontalScrollView;
@@ -20,8 +23,8 @@ public class MainActivity extends AppCompatActivity {
     byte patch_num;
     Intent webpage, about, information_about;
     LinearLayout patchLayout;
+    CoolScrollView patchScrolls;
     ScrollView scrollView;
-    HorizontalScrollView patchScrolls;
     int currentPos;
 
 
@@ -39,48 +42,50 @@ public class MainActivity extends AppCompatActivity {
         about_launch = findViewById(R.id.about_launch_tv2);
         about_launch.setText(R.string.launch1_details);
         patchLayout = findViewById(R.id.PatchViewLayout);
-        patchScrolls = findViewById(R.id.patch_scroll);
+        patchScrolls = findViewById(R.id.patch_scroll_main);
 
         webpage = new Intent();
         about = new Intent(this, About_activity.class);
 
+        patchScrolls.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                if (motionEvent.getAction() == MotionEvent.ACTION_UP) {
 
+                    patchScrolls.startScrollerTask();
+                }
+
+                return false;
+            }
+        });
+
+        patchScrolls.setOnScrollStoppedListener(new CoolScrollView.OnScrollStoppedListener() {
+
+            public void onScrollStopped() {
+                patchScrolls.smoothScrollTo(1150 * (patch_num - 1),0);
+            }
+        });
 
         patchLayout.getViewTreeObserver().addOnScrollChangedListener(new ViewTreeObserver.OnScrollChangedListener() {
             @Override
             public void onScrollChanged() {
-                currentPos = patchScrolls.getScrollX();
-                Log.d("test", Integer.toString(currentPos));
                 swipe_tv.setVisibility(View.INVISIBLE);
-                if(currentPos > 0 && currentPos < 550){
-                    patch_num = 1;
-                }
-                if(currentPos >= 550 && currentPos < 1670){
-                    patch_num = 2;
-                }
-                if(currentPos >= 1670 && currentPos < 2755){
-                    patch_num = 3;
-                }
-                if(currentPos >= 2755 && currentPos < 3848){
-                    patch_num = 4;
-                }
-                if(currentPos >= 3848 && currentPos < 4983){
-                    patch_num = 5;
-                }
-                if(currentPos >= 4983 && currentPos < 6018){
-                    patch_num = 6;
-                }
-                if(currentPos >= 6018){
-                    patch_num = 7;
-                }
+                updatePatchNumber();
                 updateInformation();
             }
         });
 
+
     }
 
 
-
+    public void updatePatchNumber(){
+        currentPos = patchScrolls.getScrollX();
+        // Log.d("test", Integer.toString(currentPos));
+        double patch_spacing = 1145.0;
+        double patch_center = patch_spacing / 2;
+        patch_num = (byte) ((byte) Math.floor(((double) currentPos + patch_center) / patch_spacing) + 1);
+    }
 
     public void updateInformation() {
 
