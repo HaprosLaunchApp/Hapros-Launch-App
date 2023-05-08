@@ -1,12 +1,15 @@
 package com.example.haproslaunchapp;
 
 import android.content.Context;
+import android.database.CursorIndexOutOfBoundsException;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.provider.MediaStore;
 import android.text.Layout;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -43,13 +46,14 @@ public class mediaPage extends Fragment {
 
     Context context;
 
+
     String file;
 
 
     public mediaPage(int yearID, Context context) {
         this.context = context;
         // Required empty public constructor
-        yearID = yearID;
+        this.yearID = yearID;
         timeLineData = new ArrayList<>();
         timeLineList = new ArrayList<>();
 //        timelineCreate();
@@ -80,6 +84,7 @@ public class mediaPage extends Fragment {
                 String iImgDate = (String) postObj.get("date");
                 String iImgDir = (String) postObj.get("imgDir");
                 String iPostDesc = (String) postObj.get("postDescription");
+
                 MediaPost x = new MediaPost(iImgDir,iImgDate,iPostDesc);
                 timeLineList.add(x);
                 System.out.println((iImgDate+iImgDir+iPostDesc));
@@ -109,7 +114,8 @@ public class mediaPage extends Fragment {
         try {
             System.out.println("Pre-iS");
             Log.d("test", context.getResources().getAssets().toString());
-            InputStream is = context.getResources().getAssets().open("json/0MediaInfo.json");
+            String fileName = Integer.toString(yearID+1)+"MediaInfo.json";
+            InputStream is = context.getResources().getAssets().open("json/"+fileName);
             System.out.println("after-iS");
 
             int size = is.available();
@@ -151,6 +157,17 @@ public class mediaPage extends Fragment {
         // Inflate the layout for this fragment
         View view =inflater.inflate(R.layout.fragment_media_page, container, false);
         LinearLayout scrollView = (LinearLayout) view.findViewById(R.id.scroll_layout);
+        VideoView videoView = (VideoView) view.findViewById(R.id.mainVideoView);
+        patch_view = (ImageView) view.findViewById(R.id.patchView_img);
+        int tux = getResources().getIdentifier("drawable/tux",null,getContext().getPackageName());
+        Drawable tuxDraw = getResources().getDrawable(tux);
+        patch_view.setImageDrawable(tuxDraw);
+        Log.d("test", videoFile);
+        String videoPath = "android.resource://"+ context.getPackageName()+"/raw/"+videoFile;
+        videoView.setVideoPath(videoPath);
+        videoView.start();
+
+
         for (MediaPost post: getTimeLineList()) {
             LinearLayout postLayout = new LinearLayout(view.getContext());
             postLayout.setOrientation(LinearLayout.VERTICAL);
@@ -166,6 +183,7 @@ public class mediaPage extends Fragment {
 
             Drawable imgDraw = getResources().getDrawable(imgres);
             postImg.setImageDrawable(imgDraw);
+            postImg.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 350));
             postImg.setScaleType(ImageView.ScaleType.FIT_CENTER);
 
             postLayout.addView(postImg);
