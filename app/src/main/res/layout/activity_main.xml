@@ -80,8 +80,8 @@
         </LinearLayout>
     </ScrollView>
 
-    <HorizontalScrollView
-        android:id="@+id/patch_scroll"
+    <com.example.haproslaunchapp.CoolScrollView
+        android:id="@+id/patch_scroll_main"
         android:layout_width="410dp"
         android:layout_height="237dp"
         android:layout_marginEnd="1dp"
@@ -107,7 +107,8 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="101dp"
                 android:layout_marginBottom="20dp"
-                android:backgroundTint="#429CE4"
+                android:backgroundTint="#1D2E5E"
+                android:contentDescription="Hapros 1"
                 android:onClick="information_page_onclick"
                 app:srcCompat="@drawable/hapros_i_patch" />
 
@@ -189,10 +190,10 @@
                 app:srcCompat="@drawable/haprosvii_patch" />
 
         </LinearLayout>
-    </HorizontalScrollView>
+    </com.example.haproslaunchapp.CoolScrollView>
 
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/about_bar"
         android:layout_width="411dp"
         android:layout_height="55dp"
         android:layout_marginTop="300dp"
@@ -200,16 +201,17 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/launchTitle_txt_main">
+        app:layout_constraintTop_toBottomOf="parent">
 
         <ImageButton
             android:id="@+id/imageButton3"
             android:layout_width="85dp"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/artemis_blue"
-            android:onClick="to_tooele_county"
             android:scaleType="fitCenter"
-            app:srcCompat="@drawable/tooele_logo_removebg" />
+            android:contentDescription="Tooele County School District Facebook Page"
+            app:srcCompat="@drawable/tooele_logo_removebg"
+            android:onClick="to_tooele_county"/>
 
         <Button
             android:id="@+id/about_button"
@@ -224,10 +226,10 @@
             android:layout_width="85dp"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/artemis_blue"
-            android:onClick="to_hapros_facebook"
             android:scaleType="fitCenter"
-            app:srcCompat="@drawable/facebook_logo" />
-        />
+            android:contentDescription="hapros facebook page link"
+            app:srcCompat="@drawable/facebook_logo"
+            android:onClick="to_hapros_facebook"/>
 
     </LinearLayout>
 

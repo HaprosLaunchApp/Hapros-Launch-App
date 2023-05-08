@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".mediaPage">
 
     <LinearLayout
@@ -16,12 +16,18 @@
             android:id="@+id/patchView_img"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:src="@android:drawable/btn_star_big_on" />
+            android:src="@android:drawable/btn_star_big_on"
+            app:srcCompat="@drawable/tux"
+            tools:srcCompat="@drawable/tux" />
 
         <VideoView
             android:id="@+id/mainVideoView"
             android:layout_width="match_parent"
-            android:layout_height="218dp" />
+            android:layout_height="218dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="5dp" />
 
         <ScrollView
             android:layout_width="match_parent"
@@ -31,6 +37,8 @@
                 android:id="@+id/scroll_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
                 android:orientation="vertical" />
         </ScrollView>
     </LinearLayout>
