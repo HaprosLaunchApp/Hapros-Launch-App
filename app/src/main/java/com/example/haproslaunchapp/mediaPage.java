@@ -53,7 +53,7 @@ public class mediaPage extends Fragment {
     public mediaPage(int yearID, Context context) {
         this.context = context;
         // Required empty public constructor
-        yearID = yearID;
+        this.yearID = yearID;
         timeLineData = new ArrayList<>();
         timeLineList = new ArrayList<>();
 //        timelineCreate();
@@ -114,7 +114,8 @@ public class mediaPage extends Fragment {
         try {
             System.out.println("Pre-iS");
             Log.d("test", context.getResources().getAssets().toString());
-            InputStream is = context.getResources().getAssets().open("json/0MediaInfo.json");
+            String fileName = Integer.toString(yearID+1)+"MediaInfo.json";
+            InputStream is = context.getResources().getAssets().open("json/"+fileName);
             System.out.println("after-iS");
 
             int size = is.available();
@@ -157,10 +158,15 @@ public class mediaPage extends Fragment {
         View view =inflater.inflate(R.layout.fragment_media_page, container, false);
         LinearLayout scrollView = (LinearLayout) view.findViewById(R.id.scroll_layout);
         VideoView videoView = (VideoView) view.findViewById(R.id.mainVideoView);
+        patch_view = (ImageView) view.findViewById(R.id.patchView_img);
+        int tux = getResources().getIdentifier("drawable/tux",null,getContext().getPackageName());
+        Drawable tuxDraw = getResources().getDrawable(tux);
+        patch_view.setImageDrawable(tuxDraw);
         Log.d("test", videoFile);
-        Uri videoPath = Uri.parse(videoFile);
-        videoView.setVideoURI(videoPath);
-        videoView.requestFocus();
+        String videoPath = "android.resource://"+ context.getPackageName()+"/raw/"+videoFile;
+        videoView.setVideoPath(videoPath);
+        videoView.start();
+
 
         for (MediaPost post: getTimeLineList()) {
             LinearLayout postLayout = new LinearLayout(view.getContext());
@@ -189,7 +195,6 @@ public class mediaPage extends Fragment {
             postDesc.setText(post.getPostDesc());
             postLayout.addView(postDesc);
             scrollView.addView(postLayout);
-            videoView.start();
         }
 
 
