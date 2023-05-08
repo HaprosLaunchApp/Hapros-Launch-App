@@ -76,7 +76,7 @@ public class countDownFragment extends Fragment {
             @Override
             public void run() {
                 Instant now = Instant.now();
-                Duration diff = Duration.between(now, now);
+                Duration diff = Duration.between(now, event);
                 days.setText(String.valueOf(diff.toDays()));
                 hours.setText( String.valueOf(diff.toHours() % 24));
                 minutes.setText(String.valueOf(diff.toMinutes() % 60));
