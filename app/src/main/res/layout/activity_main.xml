@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@color/artemis_grey">
+    android:background="@color/artemis_grey"
+    tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/swipe_textView"
@@ -19,20 +19,21 @@
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/about_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="133dp"
+        android:layout_height="54dp"
         android:layout_marginStart="161dp"
         android:layout_marginTop="34dp"
         android:layout_marginEnd="162dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="10dp"
         android:onClick="about_onclick"
         android:text="About"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/about_launch_tv" />
 
@@ -93,7 +94,8 @@
         <LinearLayout
             android:id="@+id/PatchViewLayout"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:backgroundTint="#E7553A">
 
             <ImageView
                 android:id="@+id/patch_image1"
@@ -103,8 +105,9 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="101dp"
                 android:layout_marginBottom="20dp"
+                android:backgroundTint="#1D2E5E"
                 android:onClick="information_page_onclick"
-                app:srcCompat="@drawable/haprosi_patch" />
+                app:srcCompat="@drawable/hapros_i_patch" />
 
             <ImageView
                 android:id="@+id/patch_image2"
@@ -127,6 +130,7 @@
                 android:layout_marginEnd="101dp"
                 android:layout_marginBottom="20dp"
                 android:layout_weight="1"
+                android:backgroundTint="#0066B9"
                 android:onClick="information_page_onclick"
                 app:srcCompat="@drawable/haprosiii_patch" />
 
@@ -140,7 +144,7 @@
                 android:layout_marginBottom="20dp"
                 android:layout_weight="1"
                 android:onClick="information_page_onclick"
-                app:srcCompat="@drawable/haprosiv_patch" />
+                app:srcCompat="@drawable/hapros_iv_patch" />
 
             <ImageView
                 android:id="@+id/patch_image5"
@@ -151,6 +155,7 @@
                 android:layout_marginEnd="101dp"
                 android:layout_marginBottom="20dp"
                 android:layout_weight="1"
+                android:backgroundTint="#FE0303"
                 android:onClick="information_page_onclick"
                 app:srcCompat="@drawable/haprosv_patch" />
 
@@ -163,6 +168,7 @@
                 android:layout_marginEnd="101dp"
                 android:layout_marginBottom="20dp"
                 android:layout_weight="1"
+                android:backgroundTint="#001299"
                 android:onClick="information_page_onclick"
                 app:srcCompat="@drawable/haprosvi_patch" />
 

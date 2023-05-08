@@ -192,6 +192,7 @@ public class mediaPage extends Fragment {
             videoView.start();
         }
 
+
         return view;
     }
 }
