@@ -50,7 +50,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onScrollChanged() {
                 currentPos = patchScrolls.getScrollX();
-                Log.d("test", Integer.toString(currentPos));
                 swipe_tv.setVisibility(View.INVISIBLE);
                 if(currentPos > 0 && currentPos < 550){
                     patch_num = 1;
@@ -83,7 +82,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void updateInformation() {
-
         if(patch_num == 1){
 
             main_actionBar.setTitle("Launch I");
