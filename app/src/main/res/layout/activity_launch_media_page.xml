@@ -25,37 +25,25 @@
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Ⅰ"/>
+            android:layout_height="wrap_content"/>
         <com.google.android.material.tabs.TabItem
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Ⅱ"/>
+            android:layout_height="wrap_content"/>
         <com.google.android.material.tabs.TabItem
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Ⅲ"/>
+            android:layout_height="wrap_content"/>
         <com.google.android.material.tabs.TabItem
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Ⅳ"/>
+            android:layout_height="wrap_content"/>
         <com.google.android.material.tabs.TabItem
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Ⅴ"/>
+            android:layout_height="wrap_content"/>
         <com.google.android.material.tabs.TabItem
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Ⅵ"/>
+            android:layout_height="wrap_content"/>
         <com.google.android.material.tabs.TabItem
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Ⅶ"/>
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Home"/>
-
+            android:layout_height="wrap_content"/>
 
     </com.google.android.material.tabs.TabLayout>
 

@@ -1,5 +1,6 @@
 package com.example.haproslaunchapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager2.widget.ViewPager2;
@@ -10,14 +11,16 @@ import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toolbar;
 
 import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
 
 public class launch_media_page extends AppCompatActivity {
-    ActionBar actionBar;
     ViewPager2 pageviewer;
     TabLayout tabLayout;
     PageViewerAdapter viewAdapter;
@@ -32,15 +35,12 @@ public class launch_media_page extends AppCompatActivity {
         setContentView(R.layout.activity_launch_media_page);
         Bundle bundle = getIntent().getExtras();
         year = bundle.getByte("patch_number_data");
-        actionBar = getSupportActionBar();
 
         tabLayout = findViewById(R.id.tab_layout);
         pageviewer = findViewById(R.id.page_viewer);
-        viewAdapter = new PageViewerAdapter(this,getApplicationContext());
+        viewAdapter = new PageViewerAdapter(this, getApplicationContext());
         pageviewer.setAdapter(viewAdapter);
         backHome = new Intent(launch_media_page.this, MainActivity.class);
-
-
 
 
         tabLayout.getTabAt(0).setIcon(R.drawable.roman_numeral_i);
@@ -50,11 +50,13 @@ public class launch_media_page extends AppCompatActivity {
         tabLayout.getTabAt(4).setIcon(R.drawable.roman_numeral_v);
         tabLayout.getTabAt(5).setIcon(R.drawable.roman_numeral_vi);
         tabLayout.getTabAt(6).setIcon(R.drawable.roman_numeral_vii);
-        tabLayout.getTabAt(7).setIcon(R.drawable.home_icon);
 
 
 
-
+        //Sets the actionbar's home button.
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setHomeAsUpIndicator(R.drawable.tux);
+        actionBar.setDisplayHomeAsUpEnabled(true);
 
 
 
@@ -89,5 +91,18 @@ public class launch_media_page extends AppCompatActivity {
     }
     public void back_to_home(View view) {
         startActivity(new Intent(launch_media_page.this,MainActivity.class));
+    }
+
+
+
+    //Used for the actionbar's home button.
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                this.finish();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
