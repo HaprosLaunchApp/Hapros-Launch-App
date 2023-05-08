@@ -196,22 +196,21 @@
         android:id="@+id/about_bar"
         android:layout_width="411dp"
         android:layout_height="55dp"
-        android:layout_marginTop="300dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/scroll_main">
 
         <ImageButton
             android:id="@+id/imageButton3"
             android:layout_width="85dp"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/artemis_blue"
-            android:scaleType="fitCenter"
             android:contentDescription="Tooele County School District Facebook Page"
-            app:srcCompat="@drawable/tooele_logo_removebg"
-            android:onClick="to_tooele_county"/>
+            android:onClick="to_tooele_county"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/tooele_logo_removebg" />
 
         <Button
             android:id="@+id/about_button"
@@ -226,10 +225,10 @@
             android:layout_width="85dp"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/artemis_blue"
-            android:scaleType="fitCenter"
             android:contentDescription="hapros facebook page link"
-            app:srcCompat="@drawable/facebook_logo"
-            android:onClick="to_hapros_facebook"/>
+            android:onClick="to_hapros_facebook"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/facebook_logo" />
 
     </LinearLayout>
 
@@ -237,10 +236,10 @@
         android:id="@+id/imageView2"
         android:layout_width="71dp"
         android:layout_height="83dp"
-        android:layout_marginBottom="400dp"
+        android:layout_marginBottom="350dp"
         app:layout_constraintBottom_toBottomOf="@id/about_bar"
         app:layout_constraintEnd_toEndOf="@+id/imageView5"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.02"
         app:layout_constraintStart_toStartOf="@+id/imageView5"
         app:layout_constraintTop_toTopOf="@id/patch_scroll_main"
         app:layout_constraintVertical_bias="1.0"
