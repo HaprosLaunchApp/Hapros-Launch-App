@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#343534"
+    android:background="#090B1B"
     tools:context=".MainActivity">
 
     <TextView
@@ -12,33 +12,53 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="144dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="144dp"
         android:layout_marginBottom="442dp"
-        android:text="Swipe Left or Right and Click a Patch!"
+        android:text="Swipe Left or Right!"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/about_launch_tv"
-        android:layout_width="367dp"
-        android:layout_height="324dp"
-        android:layout_marginTop="11dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="34dp"
-        android:text="(Set info about each launch)"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/about_button"
+    <ScrollView
+        android:id="@+id/scroll_main"
+        android:layout_width="365dp"
+        android:layout_height="344dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintHorizontal_bias="0.478"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/swipe_textView"
-        app:layout_constraintVertical_bias="0.15" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.777">
 
-    <HorizontalScrollView
-        android:id="@+id/patch_scroll"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/launchTitle_txt_main"
+                android:layout_width="367dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/launch1_title"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/about_launch_tv2"
+                android:layout_width="367dp"
+                android:layout_height="324dp"
+                android:lineSpacingExtra="10sp"
+                android:text="(Set info about each launch)"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <com.example.haproslaunchapp.CoolScrollView
+        android:id="@+id/patch_scroll_main"
         android:layout_width="410dp"
         android:layout_height="237dp"
         android:layout_marginEnd="1dp"
@@ -65,6 +85,7 @@
                 android:layout_marginEnd="101dp"
                 android:layout_marginBottom="20dp"
                 android:backgroundTint="#1D2E5E"
+                android:contentDescription="Hapros 1"
                 android:onClick="information_page_onclick"
                 app:srcCompat="@drawable/hapros_i_patch" />
 
@@ -144,9 +165,10 @@
                 app:srcCompat="@drawable/haprosvii_patch" />
 
         </LinearLayout>
-    </HorizontalScrollView>
+    </com.example.haproslaunchapp.CoolScrollView>
 
     <LinearLayout
+        android:id="@+id/about_bar"
         android:layout_width="411dp"
         android:layout_height="55dp"
         android:layout_marginTop="55dp"
@@ -154,7 +176,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/about_launch_tv">
+        app:layout_constraintTop_toBottomOf="parent">
 
         <ImageButton
             android:id="@+id/imageButton3"
@@ -162,6 +184,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="@color/artemis_blue"
             android:scaleType="fitCenter"
+            android:contentDescription="Tooele County School District Facebook Page"
             app:srcCompat="@drawable/tooele_logo_removebg"
             android:onClick="to_tooele_county"/>
 
@@ -179,8 +202,9 @@
             android:layout_height="wrap_content"
             android:backgroundTint="@color/artemis_blue"
             android:scaleType="fitCenter"
+            android:contentDescription="hapros facebook page link"
             app:srcCompat="@drawable/facebook_logo"
-            android:onClick="to_hapros_facebook"/> />
+            android:onClick="to_hapros_facebook"/>
 
     </LinearLayout>
 
