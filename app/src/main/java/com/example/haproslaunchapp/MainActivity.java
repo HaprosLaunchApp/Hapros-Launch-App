@@ -78,28 +78,9 @@ public class MainActivity extends AppCompatActivity {
     public void updatePatchNumber(){
         currentPos = patchScrolls.getScrollX();
         // Log.d("test", Integer.toString(currentPos));
-        // patch_num = Math.floor((double) (currentPos / 1150)) + 1; // TODO add floor function to equation
-//        if(currentPos > 0 && currentPos < 550){
-//            patch_num = 1;
-//        }
-//        if(currentPos >= 550 && currentPos < 1670){
-//            patch_num = 2;
-//        }
-//        if(currentPos >= 1670 && currentPos < 2755){
-//            patch_num = 3;
-//        }
-//        if(currentPos >= 2755 && currentPos < 3848){
-//            patch_num = 4;
-//        }
-//        if(currentPos >= 3848 && currentPos < 4983){
-//            patch_num = 5;
-//        }
-//        if(currentPos >= 4983 && currentPos < 6018){
-//            patch_num = 6;
-//        }
-//        if(currentPos >= 6018){
-//            patch_num = 7;
-//        }
+        double patch_spacing = 1145.0;
+        double patch_center = patch_spacing / 2;
+        patch_num = (byte) ((byte) Math.floor(((double) currentPos + patch_center) / patch_spacing) + 1);
     }
 
     public void updateInformation() {
