@@ -159,7 +159,7 @@ public class mediaPage extends Fragment {
         LinearLayout scrollView = (LinearLayout) view.findViewById(R.id.scroll_layout);
         VideoView videoView = (VideoView) view.findViewById(R.id.mainVideoView);
         patch_view = (ImageView) view.findViewById(R.id.patchView_img);
-        int tux = getResources().getIdentifier("drawable/tux",null,getContext().getPackageName());
+        int tux = getResources().getIdentifier("drawable/tux_patch",null,getContext().getPackageName());
         Drawable tuxDraw = getResources().getDrawable(tux);
         patch_view.setImageDrawable(tuxDraw);
         Log.d("test", videoFile);

@@ -4,7 +4,7 @@
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/artemis_blue</item>
         <item name="colorPrimaryVariant">@color/artemis_red</item>
-        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorOnPrimary">@color/black</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/artemis_orange</item>
         <item name="colorSecondaryVariant">@color/artemis_sub_orange</item>
