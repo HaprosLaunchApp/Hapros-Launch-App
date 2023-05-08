@@ -35,7 +35,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/patch_scroll" />
+        app:layout_constraintTop_toBottomOf="@id/patch_scroll_main" />
 
     <TextView
         android:id="@+id/launchTitle_txt_main"
@@ -237,12 +237,13 @@
         android:id="@+id/imageView2"
         android:layout_width="71dp"
         android:layout_height="83dp"
-        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+        android:layout_marginBottom="400dp"
+        app:layout_constraintBottom_toBottomOf="@id/about_bar"
         app:layout_constraintEnd_toEndOf="@+id/imageView5"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/imageView5"
-        app:layout_constraintTop_toTopOf="@+id/patch_scroll"
-        app:layout_constraintVertical_bias="0.43"
-        app:srcCompat="@drawable/tux" />
+        app:layout_constraintTop_toTopOf="@id/patch_scroll_main"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/tux_main" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
