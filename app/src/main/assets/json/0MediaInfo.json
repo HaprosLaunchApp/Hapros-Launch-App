@@ -1,7 +1,7 @@
 {
     "id": 0,
     "launchDate" : "May, 14, 2022",
-    "videoDir" : "video",
+    "videoDir" : "https://github.com/gavinbot32/gavinbot32.github.io/blob/main/assets/web-assets/testVid.mp4",
     "postTimeline" : [
       {
         "date":"May, 4, 2022",

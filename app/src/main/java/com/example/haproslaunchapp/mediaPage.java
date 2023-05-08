@@ -1,12 +1,15 @@
 package com.example.haproslaunchapp;
 
 import android.content.Context;
+import android.database.CursorIndexOutOfBoundsException;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.provider.MediaStore;
 import android.text.Layout;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -42,6 +45,7 @@ public class mediaPage extends Fragment {
     ArrayList<MediaPost> timeLineList;
 
     Context context;
+
 
     String file;
 
@@ -80,6 +84,7 @@ public class mediaPage extends Fragment {
                 String iImgDate = (String) postObj.get("date");
                 String iImgDir = (String) postObj.get("imgDir");
                 String iPostDesc = (String) postObj.get("postDescription");
+
                 MediaPost x = new MediaPost(iImgDir,iImgDate,iPostDesc);
                 timeLineList.add(x);
                 System.out.println((iImgDate+iImgDir+iPostDesc));
@@ -151,6 +156,12 @@ public class mediaPage extends Fragment {
         // Inflate the layout for this fragment
         View view =inflater.inflate(R.layout.fragment_media_page, container, false);
         LinearLayout scrollView = (LinearLayout) view.findViewById(R.id.scroll_layout);
+        VideoView videoView = (VideoView) view.findViewById(R.id.mainVideoView);
+        Log.d("test", videoFile);
+        Uri videoPath = Uri.parse(videoFile);
+        videoView.setVideoURI(videoPath);
+        videoView.requestFocus();
+
         for (MediaPost post: getTimeLineList()) {
             LinearLayout postLayout = new LinearLayout(view.getContext());
             postLayout.setOrientation(LinearLayout.VERTICAL);
@@ -166,6 +177,7 @@ public class mediaPage extends Fragment {
 
             Drawable imgDraw = getResources().getDrawable(imgres);
             postImg.setImageDrawable(imgDraw);
+            postImg.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 350));
             postImg.setScaleType(ImageView.ScaleType.FIT_CENTER);
 
             postLayout.addView(postImg);
@@ -177,6 +189,7 @@ public class mediaPage extends Fragment {
             postDesc.setText(post.getPostDesc());
             postLayout.addView(postDesc);
             scrollView.addView(postLayout);
+            videoView.start();
         }
 
         return view;
