@@ -3,9 +3,13 @@ package com.example.haproslaunchapp;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.content.res.AppCompatResources;
+import androidx.core.content.res.ResourcesCompat;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
@@ -13,6 +17,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewTreeObserver;
 import android.widget.HorizontalScrollView;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
@@ -20,13 +25,14 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
     ActionBar main_actionBar;
     TextView swipe_tv, about_launch, launchTitle;
+    ImageView spaceImage;
     byte patch_num;
+    Drawable[] drawables;
     Intent webpage, about, information_about;
     LinearLayout patchLayout;
     CoolScrollView patchScrolls;
     ScrollView scrollView;
     int currentPos;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +42,9 @@ public class MainActivity extends AppCompatActivity {
         patch_num = 1;
         main_actionBar.setTitle("Launch I");
 
+        drawables = getDrawables(new String[]{"save_new_2", "save_new_7", "haprosiii_view", "hapros_thumbnail_2", "hapros_still_100k_feet_3", "copy_of_hapros_still_2019_5", "save_new_4"}, getApplicationContext());
+
+        spaceImage = findViewById(R.id.space_img_main);
         swipe_tv = findViewById(R.id.swipe_textView);
         scrollView = findViewById(R.id.scroll_main);
         launchTitle = findViewById(R.id.launchTitle_txt_main);
@@ -78,6 +87,15 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public static Drawable[] getDrawables(String[] strings, Context context){
+        Drawable[] drawables = new Drawable[strings.length];
+        for(int i = 0; i < drawables.length; i++){
+            int resourceId = context.getResources().getIdentifier(strings[i], "drawable", context.getPackageName());
+            drawables[i] = ResourcesCompat.getDrawable(context.getResources(), resourceId, null);
+        }
+        return drawables;
+    }
+
 
     public void updatePatchNumber(){
         currentPos = patchScrolls.getScrollX();
@@ -88,6 +106,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void updateInformation() {
+        spaceImage.setImageDrawable(drawables[patch_num - 1]);
         if(patch_num == 1){
 
             main_actionBar.setTitle("Launch I");

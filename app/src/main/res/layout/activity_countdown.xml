@@ -13,7 +13,7 @@
         android:layout_height="match_parent">
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/background_image_countdown"
             android:layout_width="411dp"
             android:layout_height="731dp"
             android:scaleType="centerCrop"

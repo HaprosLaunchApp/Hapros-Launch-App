@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/space_img_main"
         android:layout_width="wrap_content"
         android:layout_height="125dp"
         android:layout_weight="1"
@@ -19,7 +19,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/haprosiii_view" />
+        app:srcCompat="@drawable/save_new_2" />
 
     <TextView
         android:id="@+id/swipe_textView"
@@ -195,6 +195,7 @@
         android:id="@+id/about_bar"
         android:layout_width="411dp"
         android:layout_height="55dp"
+        android:layout_marginTop="60dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -235,13 +236,12 @@
         android:id="@+id/imageView2"
         android:layout_width="71dp"
         android:layout_height="83dp"
-        android:layout_marginBottom="350dp"
-        app:layout_constraintBottom_toBottomOf="@id/about_bar"
-        app:layout_constraintEnd_toEndOf="@+id/imageView5"
-        app:layout_constraintHorizontal_bias="0.02"
-        app:layout_constraintStart_toStartOf="@+id/imageView5"
+        app:layout_constraintBottom_toBottomOf="@+id/about_bar"
+        app:layout_constraintEnd_toEndOf="@+id/space_img_main"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/space_img_main"
         app:layout_constraintTop_toTopOf="@id/patch_scroll_main"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintVertical_bias="0.437"
         app:srcCompat="@drawable/tux_main" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
