@@ -12,22 +12,17 @@
         android:orientation="vertical"
         tools:context=".MediaPages">
 
-        <ImageView
-            android:id="@+id/patchView_img"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:src="@android:drawable/btn_star_big_on"
-            app:srcCompat="@drawable/tux_patch"
-            tools:srcCompat="@drawable/tux_patch" />
-
         <VideoView
             android:id="@+id/mainVideoView"
             android:layout_width="match_parent"
             android:layout_height="218dp"
             android:layout_marginLeft="5dp"
+            android:layout_marginTop="20dp"
             android:layout_marginRight="5dp"
+            android:layout_marginBottom="20dp"
             android:paddingLeft="10dp"
-            android:paddingRight="5dp" />
+            android:paddingRight="5dp"
+            android:paddingBottom="10dp" />
 
         <ScrollView
             android:layout_width="match_parent"

@@ -158,14 +158,22 @@ public class mediaPage extends Fragment {
         View view =inflater.inflate(R.layout.fragment_media_page, container, false);
         LinearLayout scrollView = (LinearLayout) view.findViewById(R.id.scroll_layout);
         VideoView videoView = (VideoView) view.findViewById(R.id.mainVideoView);
-        patch_view = (ImageView) view.findViewById(R.id.patchView_img);
-        int tux = getResources().getIdentifier("drawable/tux_patch",null,getContext().getPackageName());
-        Drawable tuxDraw = getResources().getDrawable(tux);
-        patch_view.setImageDrawable(tuxDraw);
         Log.d("test", videoFile);
         String videoPath = "android.resource://"+ context.getPackageName()+"/raw/"+videoFile;
         videoView.setVideoPath(videoPath);
         videoView.start();
+        videoView.pause();
+        videoView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(!videoView.isPlaying()){
+                    videoView.start();
+                }else{
+                    videoView.pause();
+                }
+            }
+        });
+
 
 
         for (MediaPost post: getTimeLineList()) {
