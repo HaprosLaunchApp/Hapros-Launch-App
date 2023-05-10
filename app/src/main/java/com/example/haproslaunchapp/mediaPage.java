@@ -18,6 +18,7 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.MediaController;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.VideoView;
@@ -161,18 +162,25 @@ public class mediaPage extends Fragment {
         Log.d("test", videoFile);
         String videoPath = "android.resource://"+ context.getPackageName()+"/raw/"+videoFile;
         videoView.setVideoPath(videoPath);
+
+        MediaController mediaController = new MediaController(videoView.getContext());
+        mediaController.setAnchorView(videoView);
+        videoView.setMediaController(mediaController);
         videoView.start();
         videoView.pause();
-        videoView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(!videoView.isPlaying()){
-                    videoView.start();
-                }else{
-                    videoView.pause();
-                }
-            }
-        });
+
+//        videoView.start();
+//        videoView.pause();
+//        videoView.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                if(!videoView.isPlaying()){
+//                    videoView.start();
+//                }else{
+//                    videoView.pause();
+//                }
+//            }
+//        });
 
 
 
