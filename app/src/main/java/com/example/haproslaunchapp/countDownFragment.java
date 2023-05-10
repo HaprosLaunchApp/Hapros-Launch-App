@@ -3,6 +3,7 @@ package com.example.haproslaunchapp;
 import static android.view.View.VISIBLE;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -16,20 +17,24 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.time.Duration;
 import java.time.Instant;
 import java.time.format.DateTimeFormatter;
+import java.util.Random;
 
 public class countDownFragment extends Fragment {
     String eventStr;
     DateTimeFormatter fmt;
     TextView days, hours, minutes, seconds, untilLaunch;
+    ImageView bgImage;
+    Drawable[] drawables;
     Instant event;
     Intent webpage;
     Button websiteButton;
-    boolean infoChanged = false;
+    boolean infoChanged, pictureChanged = false;
     public countDownFragment() {
         // Required empty public constructor
     }
@@ -46,7 +51,12 @@ public class countDownFragment extends Fragment {
         seconds = (TextView) view.findViewById(R.id.seconds_txt_countdown);
         websiteButton = (Button) view.findViewById(R.id.toLive_bttn_countdown);
         untilLaunch = (TextView) view.findViewById(R.id.untilLaunch_txt_countdown);
+        bgImage = (ImageView) view.findViewById(R.id.background_image_countdown);
 
+        drawables = MainActivity.getDrawables(new String[]{"background", "copy_of_hapros_still_2019_2", "copy_of_hapros_still_2019_5", "copy_of_hapros_still_2019", "hapros_still_100k_feet_1","hapros_still_100k_feet_2","save_new_2","save_new_4","save_new_7","hapros_still_100k_feet_3", "hapros_still_95k_feet_with_tux","hapros_still_100k_feet"}, getContext());
+        Random rand = new Random();
+        int n = rand.nextInt(drawables.length);
+        bgImage.setImageDrawable(drawables[n]);
         eventStr = "2023-05-13T14:00:00Z";
         //eventStr = "2023-05-4T15:45:00Z";
 
@@ -80,9 +90,19 @@ public class countDownFragment extends Fragment {
                 days.setText(String.valueOf(diff.toDays()));
                 hours.setText( String.valueOf(diff.toHours() % 24));
                 minutes.setText(String.valueOf(diff.toMinutes() % 60));
+
                 seconds.setText(String.valueOf(diff.getSeconds() % 60));
                 handler.postDelayed(this,500); // set time here to refresh textView
 
+                if(seconds.getText().equals("0") && !pictureChanged){
+                    pictureChanged = true;
+                    Random rand = new Random();
+                    int n = rand.nextInt(drawables.length);
+                    bgImage.setImageDrawable(drawables[n]);
+                }
+                else if(!seconds.getText().equals("0")){
+                    pictureChanged = false;
+                }
                 if((diff.isNegative() || diff.isZero()) && !infoChanged){
                     infoChanged = true;
                     websiteButton.setVisibility(VISIBLE);
