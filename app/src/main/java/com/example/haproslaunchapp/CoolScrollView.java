@@ -4,6 +4,11 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.widget.HorizontalScrollView;
 
+/*
+ * CoolScrollView is a class which implements a horizontal scroll view with an on stop listener
+ * found on stackOverflow
+ */
+
 public class CoolScrollView extends HorizontalScrollView {
 
     private Runnable scrollerTask;

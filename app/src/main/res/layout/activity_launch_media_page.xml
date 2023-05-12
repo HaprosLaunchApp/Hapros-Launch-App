@@ -23,27 +23,14 @@
         app:tabSelectedTextColor="@color/teal_700"
         android:id="@+id/tab_layout">
 
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+        <com.google.android.material.tabs.TabItem android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <com.google.android.material.tabs.TabItem android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <com.google.android.material.tabs.TabItem android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <com.google.android.material.tabs.TabItem android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <com.google.android.material.tabs.TabItem android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <com.google.android.material.tabs.TabItem android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <com.google.android.material.tabs.TabItem android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <!-- TODO duplicate above TabItem here for new years-->
 
     </com.google.android.material.tabs.TabLayout>
 

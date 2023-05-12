@@ -12,6 +12,7 @@ import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
@@ -33,13 +34,21 @@ public class MainActivity extends AppCompatActivity {
     CoolScrollView patchScrolls;
     ScrollView scrollView;
     int currentPos;
+    int screenWidth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         main_actionBar = getSupportActionBar();
         patch_num = 1;
+        { // Get screen width
+            DisplayMetrics displayMetrics = new DisplayMetrics();
+            getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+            screenWidth = displayMetrics.widthPixels;
+        }
+
         main_actionBar.setTitle("Launch I");
 
         drawables = getDrawables(new String[]{"save_new_2", "save_new_7", "haprosiii_view", "hapros_thumbnail_2", "hapros_still_100k_feet_3", "copy_of_hapros_still_2019_5", "save_new_4"}, getApplicationContext());
@@ -56,6 +65,8 @@ public class MainActivity extends AppCompatActivity {
         webpage = new Intent();
         about = new Intent(this, About_activity.class);
 
+
+        // Add listener functionality to the patches scroll view
         patchScrolls.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
@@ -67,14 +78,12 @@ public class MainActivity extends AppCompatActivity {
                 return false;
             }
         });
-
         patchScrolls.setOnScrollStoppedListener(new CoolScrollView.OnScrollStoppedListener() {
 
             public void onScrollStopped() {
                 patchScrolls.smoothScrollTo(1150 * (patch_num - 1),0);
             }
         });
-
         patchLayout.getViewTreeObserver().addOnScrollChangedListener(new ViewTreeObserver.OnScrollChangedListener() {
             @Override
             public void onScrollChanged() {
@@ -83,8 +92,6 @@ public class MainActivity extends AppCompatActivity {
                 updateInformation();
             }
         });
-
-
     }
 
     public static Drawable[] getDrawables(String[] strings, Context context){
@@ -144,30 +151,31 @@ public class MainActivity extends AppCompatActivity {
             about_launch.setText(R.string.launch7_details);
             launchTitle.setText(R.string.launch7_title);
         }
+        // add `else if (patch_num == 8/9/10/...){ main_actionBar.setTitle("Launch VIII/IX/X/XI/XII/XIII/XIV") ... }` for new patches
+        // TODO connect info strings to the text views for new years
+
     }
 
 
 
 
 
+    // Button functionality
     public void information_page_onclick(View view) {
         information_about = new Intent(MainActivity.this, launch_media_page.class);
         Log.d("test", Integer.toString(patch_num));
         information_about.putExtra("patch_number_data", patch_num);
         startActivity(information_about);
     }
-
     public void about_onclick(View view) {
         startActivity(about);
     }
-
     public void to_tooele_county(View view) {
         webpage.setAction(Intent.ACTION_VIEW);
         webpage.addCategory(Intent.CATEGORY_BROWSABLE);
         webpage.setData(Uri.parse("https://www.facebook.com/tooeleschools"));
         startActivity(webpage);
     }
-
     public void to_hapros_facebook(View view) {
         webpage.setAction(Intent.ACTION_VIEW);
         webpage.addCategory(Intent.CATEGORY_BROWSABLE);

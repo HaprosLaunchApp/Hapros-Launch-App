@@ -115,6 +115,7 @@ public class mediaPage extends Fragment {
         try {
             System.out.println("Pre-iS");
             Log.d("test", context.getResources().getAssets().toString());
+            // TODO add new file called (year number -1)MediaInfo.json in the assets/json/ directory for new years
             String fileName = Integer.toString(yearID+1)+"MediaInfo.json";
             InputStream is = context.getResources().getAssets().open("json/"+fileName);
             System.out.println("after-iS");

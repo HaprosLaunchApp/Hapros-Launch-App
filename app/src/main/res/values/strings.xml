@@ -9,6 +9,7 @@
     <string name="launch5_details"><font color="#FF1274B9"><b>Capsule Name:</b></font> \"Off-Nominal\"\n<font color="#FF1274B9"><b>Launch Date:</b></font> May 18, 2021\n<font color="#FF1274B9"><b>Launched From:</b></font> Corrine, UT\n<font color="#FF1274B9"><b>Altitude Reached:</b></font> 100,000 feet\n<font color="#FF1274B9"><b>Recovery Status:</b></font> Recovered\n<font color="#FF1274B9"><b>Recovery Location:</b></font> Lower fairing at the base of Little Mountain. Upper fairing recovered in Honeyville\n<font color="#FF1274B9"><b>About:</b></font> HAPROS V\'s capsule was an approximate scale replica of SpaceX\'s Crew Dragon.</string>
     <string name="launch6_details"><font color="#FF429CE4"><b>Capsule Name:</b></font> \"HAPROS VI\"\n<font color="#FF429CE4"><b>Launch Date:</b></font> May 18, 2021\n<font color="#FF429CE4"><b>Launched From:</b></font> Grantsville Reservoir, UT\n<font color="#FF429CE4"><b>Altitude Reached:</b></font> 101,000\n<font color="#FF429CE4"><b>Recovery Status:</b></font> Recovered\n<font color="#FF429CE4"><b>Recovery Location:</b></font> Recovered in downtown Salt Lake.\n<font color="#FF429CE4"><b>About:</b></font> HAPROS VI was launched twice—after a launch went wrong in Skull Valley, another launch was attempted weeks later in Granstville.</string>
     <string name="launch7_details"><font color="#FF0066B3"><b>Capsule Name:</b></font> \"PLS DON\'T SHOOT\"\n<font color="#FF0066B3"><b>Launch Date:</b></font> May 13, 2021\n<font color="#FF0066B3"><b>Launched From:</b></font> Stockton, UT\n<font color="#FF0066B3"><b>Altitude Reached:</b></font> TBD\n<font color="#FF0066B3"><b>Recovery Status:</b></font> TBD\n<font color="#FF0066B3"><b>Recovery Location:</b></font> TBD\n<font color="#FF0066B3"><b>About:</b></font> HAPROS VII\'s capsule was designed after the Artemis capsules.</string>
+    <!-- TODO add new launch details as well as themes for new years here -->
 
     <string name="launch1_title"><font face='sans-serif-black' size='40' color="#FFB61443"><b>HAPROS I</b></font></string>
     <string name="launch2_title"><font face='sans-serif-black' size='40' color="#FFED293D"><b>HAPROS II</b></font></string>
@@ -17,6 +18,8 @@
     <string name="launch5_title"><font face='sans-serif-black' size='40' color="#FFFE0303"><b>HAPROS V</b></font></string>
     <string name="launch6_title"><font face='sans-serif-black' size='40' color="#FFE7553A"><b>HAPROS VI</b></font></string>
     <string name="launch7_title"><font face='sans-serif-black' size='40' color="#FFF10000"><b>HAPROS VII</b></font></string>
+<!--<string name="launch8_title"><font face='sans-serif-black' size='40' color="(primary text theme here)"><b>HAPROS VII</b></font></string>-->
+    <!-- TODO add title styling and text for new years here here -->
 
 
     <string name="app_developers">App Developers</string>>

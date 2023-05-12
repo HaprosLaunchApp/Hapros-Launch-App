@@ -188,6 +188,8 @@
                 android:onClick="information_page_onclick"
                 app:srcCompat="@drawable/haprosvii_patch" />
 
+            <!--TODO add patch images here for new years-->
+
         </LinearLayout>
     </com.example.haproslaunchapp.CoolScrollView>
 

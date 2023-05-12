@@ -17,6 +17,9 @@ public class PageViewerAdapter extends FragmentStateAdapter {
     @NonNull
     @Override
     public Fragment createFragment(int position) {
+        // the if position >= 6 line below determines when to use the countdown fragment and when to use the mediaPage fragment
+        // position reflects the currently selected tab in the activity_launch_media_page.xml starting from 0
+        // TODO increase\/ the below number to be the current year -1
         if (position >= 6) {
             return new countDownFragment();
         }
