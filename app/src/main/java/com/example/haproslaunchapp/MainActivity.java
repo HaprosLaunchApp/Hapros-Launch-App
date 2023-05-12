@@ -14,8 +14,10 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.util.Log;
+import android.view.ContextThemeWrapper;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
 import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
@@ -35,6 +37,8 @@ public class MainActivity extends AppCompatActivity {
     ScrollView scrollView;
     int currentPos;
     int screenWidth;
+    int imageWidth;
+    int imageHeight;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +52,8 @@ public class MainActivity extends AppCompatActivity {
             getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
             screenWidth = displayMetrics.widthPixels;
         }
+        imageWidth = 212;
+
 
         main_actionBar.setTitle("HAPROS");
 
@@ -65,6 +71,16 @@ public class MainActivity extends AppCompatActivity {
         webpage = new Intent();
         about = new Intent(this, About_activity.class);
 
+
+//        ContextThemeWrapper newContext = new ContextThemeWrapper(this, R.style.patch_style);
+
+//        ViewGroup.LayoutParams ll = new ViewGroup.LayoutParams(imageWidth,imageHeight);
+//        for(int i=0; i<patchLayout.getChildCount(); i++) {
+//            ImageView v = (ImageView) patchLayout.getChildAt(i);
+            // Setup all images
+
+//            v.setLayoutParams(ll);
+//        }
 
         // Add listener functionality to the patches scroll view
         patchScrolls.setOnTouchListener(new View.OnTouchListener() {
