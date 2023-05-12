@@ -151,7 +151,7 @@ public class MainActivity extends AppCompatActivity {
             about_launch.setText(R.string.launch7_details);
             launchTitle.setText(R.string.launch7_title);
         }
-        // add `else if (patch_num == 8/9/10/...){ main_actionBar.setTitle("Launch VIII/IX/X/XI/XII/XIII/XIV") ... }` for new patches
+        // add `else if (patch_num == 8/9/10/...){ main_actionBar.setTitle("HAPROS VIII/IX/X/XI/XII/XIII/XIV") ... }` for new patches
         // TODO connect info strings to the text views for new years
 
     }
