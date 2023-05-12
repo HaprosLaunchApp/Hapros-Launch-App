@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         main_actionBar = getSupportActionBar();
         patch_num = 1;
-        main_actionBar.setTitle("Launch I");
+        main_actionBar.setTitle("HAPROS");
 
         drawables = getDrawables(new String[]{"save_new_2", "save_new_7", "haprosiii_view", "hapros_thumbnail_2", "hapros_still_100k_feet_3", "copy_of_hapros_still_2019_5", "save_new_4"}, getApplicationContext());
 
@@ -109,38 +109,38 @@ public class MainActivity extends AppCompatActivity {
         spaceImage.setImageDrawable(drawables[patch_num - 1]);
         if(patch_num == 1){
 
-            main_actionBar.setTitle("Launch I");
+            main_actionBar.setTitle("HAPROS I");
             about_launch.setText(R.string.launch1_details);
             launchTitle.setText(R.string.launch1_title);
         }
         else if(patch_num == 2){
 
-            main_actionBar.setTitle("Launch II");
+            main_actionBar.setTitle("HAPROS II");
             about_launch.setText(R.string.launch2_details);
             launchTitle.setText(R.string.launch2_title);
         }
         else if(patch_num == 3){
-            main_actionBar.setTitle("Launch III");
+            main_actionBar.setTitle("HAPROS III");
             about_launch.setText(R.string.launch3_details);
             launchTitle.setText(R.string.launch3_title);
         }
         else if(patch_num == 4){
-            main_actionBar.setTitle("Launch IV");
+            main_actionBar.setTitle("HAPROS IV");
             about_launch.setText(R.string.launch4_details);
             launchTitle.setText(R.string.launch4_title);
         }
         else if(patch_num == 5){
-            main_actionBar.setTitle("Launch V");
+            main_actionBar.setTitle("HAPROS V");
             about_launch.setText(R.string.launch5_details);
             launchTitle.setText(R.string.launch5_title);
         }
         else if(patch_num == 6){
-            main_actionBar.setTitle("Launch VI");
+            main_actionBar.setTitle("HAPROS VI");
             about_launch.setText(R.string.launch6_details);
             launchTitle.setText(R.string.launch6_title);
         }
         else if(patch_num == 7){
-            main_actionBar.setTitle("Launch VII");
+            main_actionBar.setTitle("HAPROS VII");
             about_launch.setText(R.string.launch7_details);
             launchTitle.setText(R.string.launch7_title);
         }

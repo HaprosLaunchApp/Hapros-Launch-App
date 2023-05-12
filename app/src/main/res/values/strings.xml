@@ -24,11 +24,11 @@
     <string name="engineering_team">Engineering Team</string>>
     <string name="instructors">Instructors</string>>
 
-    <string name="app_developers_names">Seth Squires\nLogan Lenoir\nRylan Swenson\nGavin Murdock\nBen Michaelis</string>>
+    <string name="app_developers_names">Seth Squires\nLogan Lenoir\nRylan Swenson\nGavin Murdock\nBen Michaelis</string>
 
-    <string name="what_is_hapros">The High Altitude Pi Reaching Outer Stratosphere (HAPROS) mission is a project by Mr. Thomsen\'s Linux class at Tooele County School District\'s Community Learning Center\n\n
-        <font size="18">The Goal:</font>\n
-    The goal of this project is to send a payload to near space, and track it using a very small computer called a Raspberry Pi running a lean but powerful operating system called Linux.</string>
+    <string name="what_is_hapros">The High Altitude Pi Reaching Outer Stratosphere (HAPROS) mission is a project by Mr. Thomsen\'s Linux class at Tooele County School District\'s Community Learning Center\n\n</string>
+        <string name="what_is_hapros2"><font size="18">The Goal:</font></string>
+    <string name="what_is_hapros3">The goal of this project is to send a payload to near space, and track it using a very small computer called a Raspberry Pi running a lean but powerful operating system called Linux.</string>
 
     <string name="launch_team_names">Joe Griffith - Telemetry, Payload, Imagery\n
     Ella - Telemetry, Imagery\n

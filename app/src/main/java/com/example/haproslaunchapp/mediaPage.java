@@ -189,7 +189,9 @@ public class mediaPage extends Fragment {
             postLayout.setOrientation(LinearLayout.VERTICAL);
             ImageView postImg = new ImageView(postLayout.getContext());
             TextView dateHead = new TextView(postLayout.getContext());
+            //dateHead.setTextColor(R.color.white);
             TextView postDesc = new TextView(postLayout.getContext());
+            //postDesc.setTextColor(R.color.white);
             postImg.setScaleType(ImageView.ScaleType.FIT_CENTER);
             postImg.setMaxWidth(182);
 

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    android:backgroundTint="#390909"
+    android:backgroundTint="@color/artemis_blue"
     tools:context=".About_activity">
 
     <LinearLayout
@@ -14,13 +14,16 @@
         android:orientation="vertical">
 
         <ScrollView
+            android:id="@+id/scrollViewAbout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp">
 
                 <TextView
                     android:id="@+id/textView7"
@@ -40,6 +43,28 @@
                     android:textAlignment="center"
                     android:textColor="#FFFFFF"
                     android:textSize="16sp" />
+
+                <VideoView
+                   android:id="@+id/videoView2"
+                   android:layout_width="match_parent"
+                   android:layout_height="218dp"
+                   android:focusedByDefault="true"/>
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/what_is_hapros2"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/what_is_hapros3"
+                    android:textColor="#FFFFFF" />
 
                 <TextView
                     android:id="@+id/textView5"
@@ -137,6 +162,13 @@
                     android:textAlignment="center"
                     android:textColor="#FFFFFF"
                     android:textSize="16sp" />
+
+                <VideoView
+                    android:id="@+id/videoView"
+                    android:layout_width="match_parent"
+                    android:layout_height="218dp"
+                    android:focusedByDefault="false"/>
+
             </LinearLayout>
         </ScrollView>
 

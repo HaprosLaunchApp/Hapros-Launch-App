@@ -6,29 +6,27 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ScrollView;
 
 public class About_activity extends AppCompatActivity {
 
     Intent backHome;
+    ScrollView scrollView_about_page;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
 
-
         ActionBar actionBar = getSupportActionBar();
         actionBar.setHomeAsUpIndicator(R.drawable.tux_in_home2_resized);
         actionBar.setDisplayHomeAsUpEnabled(true);
-        //Set text if needed.
-        //actionBar.setTitle("[Set Text Here]");
-    }
+        actionBar.setTitle("About HAPROS");
 
-    public void home(View view) {
-        backHome = new Intent(About_activity.this, MainActivity.class);
-        startActivity(backHome);
+        scrollView_about_page = findViewById(R.id.scrollViewAbout);
+        scrollView_about_page.setVerticalScrollbarPosition(0);
+
     }
 
 
